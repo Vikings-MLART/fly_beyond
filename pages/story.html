@@ -35,7 +35,7 @@
                         <label class="input-label" for="name">name</label>
                         <input class="input-text" type="text" name="name" id="name" autocomplete="off" required>
                     </div>
-                    
+
                     <fieldset class="gender">
                         <label class="gender__label">Gender</label>
                         <div class="input-group">
@@ -47,12 +47,29 @@
                             <label for="female" class="input-label">Female</label>
                             <input type="radio" value="female" id="female" name="gender">
                         </div>
+
+                        <!--  <label for="myImage">please insert an image </label>
+
+                        https://www.codegrepper.com/code-examples/html/accept+only+image+files+upload+html -->
+                        <!-- <input type="file" id="myImage" name="myImage" accept="image/x-png,image/gif,image/jpeg" />  -->
+
+                        <div class="input-group">
+                            <label class="input-label" for="pictuers">you can share your picture here</label>
+                            <input class="input-text" type="text" pic="pictuers" id="pictuers" autocomplete="off"
+                                required>
+                        </div>
+
                     </fieldset>
+                    <br>
+                    <br>
 
                     <div class="input-group">
                         <label class="input-label" for="description">tell us briefly about your journey</label>
-                        <textarea class="input-text" name="description" id="description" rows="15" cols="50" required></textarea>
+                        <textarea class="input-text" name="description" id="description" rows="15" cols="50"
+                            required></textarea>
                     </div>
+
+
 
                     <input type="submit" value="Add Story">
                 </form>
