@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/book_flight.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+
+
+
+
+        <form id="flight_info">
+            <input type="radio" id="round_trip" name="type_of_the_trip" value="roundtrip">
+            <label class="lable" for="round_trip">Round_Trip</label>
+
+            <input type="radio" id="one_way" name="type_of_the_trip" value="oneway">
+            <label class="lable" for="one_way">One_Way</label>
+
+
+            
+            <div id="round_trip_button" >
+
+
+                <label class="lable" for="departing">Departing From </label>
+                <input type="text" id="departing" name="departing">
+
+
+                <label class="lable" for="going_to">Going To </label>
+                <input type="text" id="going_to" name="going_to">
+                <br>
+
+                <label class="lable" for="departdate">Departing </label>
+                <input type="date" id="departdate" name="departdate" min="2021-06-17" max="2022-06-17">
+
+                <label class="lable" for="returndate">Returning </label>
+                <input type="date" id="returndate" name="returndate" min="2021-06-18">
+                <br>
+                <label class="lable" for="adult">Adult/'s' </label>
+                <input type="number" id="adult" name="adult">
+
+                <label class="lable" for="child">Child/ Children </label>
+                <input type="number" id="child" name="child">
+                <br>
+                <label>
+                    <span>Choose Flight Class</span>
+                    <select id="flightclass">
+                        <option value="1">First </option>
+                        <option value="2">Business </option>
+                        <option value="3">Economy </option>
+                        <option value="4">Premium Economy </option>
+
+
+                    </select>
+                </label>
+                <br>
+
+
+                
+
+
+
+            </div>
+
+
+            
+
+            <input type="submit" value="Search For Your Flight" id="submitbtn">
+        </form>
+
+
+<button>Filter </button>
+
+<div id="filter">
+
+
+
+</div>
+<div id="render-flight">
+
+
+
+</div>
+
+
+
+    </main>
+    <footer>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contact">
+            <a class="contact__email" href="#">sinbad.travil@example.com</a>
+            <a class="contact__phone" href="#">0999999</a>
+            <a class="contact__location" href="#">Seattle, WA, US</a>
+        </div>
+
+        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+            Proudly Published With ASAC Team.</p>
+
+    </footer>
+    <script src="../js/book_flight.js"></script>
+
+</body>
+
+</html>
