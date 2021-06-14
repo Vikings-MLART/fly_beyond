@@ -1,0 +1,73 @@
+.section-story-form{
+    margin: 30px 200px;
+
+}
+main section:first-child{
+    background: blanchedalmond;
+
+}
+
+main form{
+    padding: 80px;
+
+}
+.input-group:last-child{
+    display: block;
+}
+.input-group .last{
+    display: block;
+
+}
+
+.user-story{
+    margin: 20px 200px;
+
+    background: #8db7db;
+    padding: 30px;
+    border-radius: 20px;
+
+    
+
+}
+.user-story .img-story{
+    clear: both;
+
+    float: left;
+
+    border-radius: 50%;
+    
+    
+}
+.user-story h3{
+    font-size: 35px;
+
+    color: white;
+    margin-top: 20px;
+
+}
+.user-story .story-text-container{
+    margin-bottom: 70px;
+    margin-left: 160px;
+
+}
+.user-story  .fav-img{
+    clear: both;
+    margin: 50px 30px;
+
+}
+ .user-story .fav-img img{
+     
+    width: 35%;
+    height: 250px;
+ }
+footer{
+    clear: both;
+
+}
+
+.story-text-container p{
+    font-size: 20px;
+    margin-top: 25px;
+    color: antiquewhite;
+    /* overflow: scroll;*/
+} 

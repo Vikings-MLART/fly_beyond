@@ -41,7 +41,7 @@ function Story(name, storyText, imgPath, picArray) {
   this.name = name;
   this.imgPath = imgPath;
   this.storyText = storyText;
-  this.picArray = picArray;
+  this.picArray=picArray;
   Story.storiesList.push(this);
 }
 Story.storiesList = [];
@@ -69,6 +69,8 @@ const renderStories = function () {
     const storyTextContainer = document.createElement('div');
     const userName = document.createElement('h3');
     const userImage = document.createElement('img');
+    userImage.classList.add('img-story');
+
     const userStoryText = document.createElement('p');
     userName.textContent = Story.storiesList[i].name;
     userImage.src = Story.storiesList[i].imgPath;
@@ -84,6 +86,7 @@ const renderStories = function () {
       for (let j = 0; j < Story.storiesList[i].picArray.length; j++) {
         let appear = document.createElement('img');
         appear.setAttribute("src", Story.storiesList[i].picArray);
+        storyUserGallary.classList.add('fav-img');
         storyUserGallary.appendChild(appear);
 
       }
