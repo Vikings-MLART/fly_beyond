@@ -35,13 +35,13 @@
 
         <form class="flight-form">
             <div class="row">
-                <select class="col span-4-of-12" name="flight-type" id="flight-type">
-                    <option value="two way">two way</option>
+                <select class="col span-4-of-12" name="flight-type" id="flight-type" >
+                    <option value="two way" selected>two way</option>
                     <option value="one way">one way</option>
                 </select>
     
-                <select class="col span-4-of-12" name="flight-class" id="flight-class">
-                    <option value="economy">Economy</option>
+                <select class="col span-4-of-12" name="flight-class" id="flight-class" >
+                    <option value="economy" selected>Economy</option>
                     <option value="premium economy">premium economy</option>
                     <option value="business">business</option>
                     <option value="first">first</option>
@@ -49,23 +49,23 @@
         
                 <div class="input-group col span-2-of-12">
                     <label for="passenger">passenger #</label>
-                    <input type="number" name="passenger" id="passenger">
+                    <input type="number" name="passenger" id="passenger" required>
                 </div>
             </div>
 
             <div class="input-fields row">
                 <div class="field-group">
                     <span class="material-icons-outlined">flight_takeoff</span>
-                    <input type="text" name="from" id="from" placeholder="From?">
+                    <input type="text" name="from" id="from" placeholder="From?" required>
                 </div>
 
                 <div class="field-group">
                     <span class="material-icons-outlined">flight_land</span>
-                    <input type="text" name="to" id="to" placeholder="To?">
+                    <input type="text" name="to" id="to" placeholder="To?" required>
                 </div>
 
                 <div class="field-group">
-                    <input type="date" name="start-date" id="start-date">
+                    <input type="date" name="start-date" id="start-date" required>
                     <input type="date" name="end-date" id="end-date">
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 <option value="Best">Best</option>
                 <option value="closest">Closest</option>
             </select>
-            <button type="button"Filter>Filter</button>
+            <button class="filter-btn" type="button">Filter</button>
         </div>
 
     </div>

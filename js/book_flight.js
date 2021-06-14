@@ -10,13 +10,9 @@ request.onload = function(){
 
 
   for(let i =0; i < flights.length; i++){
-    console.log(flights[i]);
     new Flight(flights[i].company, flights[i].duration, flights[i].departureTime, flights[i].arrivalTime
       , flights[i].origin, flights[i].destination, flights[i].price, flights[i].luggageWight);
   }
-
-  // document.querySelector('#start-date');
-  // console.log( document.querySelector('#start-date').value);
 };
 
 let id = 0;
@@ -32,7 +28,7 @@ Cart.prototype.addItem = function(company, duration, departureTime, arrivalTime,
   let itemPrice = new Price(price.economy, price.premiumEconomy, price.business, price.first);
   let newItem = new CartItem(company, duration, departureTime, arrivalTime, origin, destination,itemPrice,itemWight);
   newItem.id = id++;
-  this.push(newItem);
+  this.items.push(newItem);
   console.log(newItem.id);
 };
 

@@ -1,0 +1,1308 @@
+[
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Bahrain",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Doha",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Kuwait",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Mogadishu",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Damascus",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Djibouti",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Khartoum",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Sanaa",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Nouakchott",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Rabat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Muscat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Moroni",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Abu Dhabi",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Dubai",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Cairo",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Sharm El Sheikh",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Alexandria",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Algiers",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Tunis",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Beirut",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Royal Jordanian Airlines",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Baghdad",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Bahrain",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Doha",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Kuwait",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Mogadishu",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Damascus",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Djibouti",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Khartoum",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Sanaa",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Nouakchott",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Rabat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Muscat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Moroni",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Abu Dhabi",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Dubai",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Cairo",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Sharm El Sheikh",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Alexandria",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Algiers",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Tunis",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Beirut",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "AirArabia",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Amman",
+        "destination": "Baghdad",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Doha",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+    {
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Kuwait",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+
+    {
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Amman",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Mogadishu",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Damascus",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Djibouti",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Khartoum",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Sanaa",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Nouakchott",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Rabat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Muscat",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Moroni",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Abu Dhabi",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Dubai",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Cairo",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Sharm El Sheikh",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Alexandria",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Algiers",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Tunis",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Beirut",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },{
+        "company": "Bahrain Air",
+        "duration": 590,
+        "departureTime": "2021-06-17T21:30-03:00",
+        "arrivalTime": "2021-06-18T06:20-04:00",
+        "origin": "Bahrain",
+        "destination": "Baghdad",
+        "price": {
+            "economy": "220",
+            "Premium Economy": "270",
+            "Business": "320",
+            "First": "370"
+        },
+        "luggageWight": {
+            "weightUnit": "KG",
+            "economy": "25",
+            "Premium Economy": "28",
+            "Business": "32",
+            "First": "35"
+        }
+    },
+]
