@@ -99,5 +99,3 @@ const renderStories = function () {
 };
 document.querySelector('.story-form').addEventListener('submit', storySubmtionHandler);
 renderStories();
-
-
