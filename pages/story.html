@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>review</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/story.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="../index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a class="active" href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <br>
+    </header>
+    <main>
+        <section class="section-story-form">
+            <div class="form-container">
+                <form class="story-form">
+
+                    <div class="input-group">
+                        <label class="input-label" for="name">name</label>
+                        <input class="input-text" type="text" name="name" id="name" autocomplete="off" required>
+                    </div>
+                    
+                    <fieldset class="gender">
+                        <label class="gender__label">Gender</label>
+                        <div class="input-group">
+                            <label for="male" class="input-label">Male</label>
+                            <input type="radio" value="male" id="male" name="gender">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="female" class="input-label">Female</label>
+                            <input type="radio" value="female" id="female" name="gender">
+                        </div>
+                    </fieldset>
+
+                    <div class="input-group">
+                        <label class="input-label" for="description">tell us briefly about your journey</label>
+                        <textarea class="input-text" name="description" id="description" rows="15" cols="50" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Add Story">
+                </form>
+            </div>
+        </section>
+
+        <div class="users-stories-container">
+        </div>
+
+    </main>
+    <footer>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="../index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contact">
+            <a class="contact__email" href="#">sinbad.travil@example.com</a>
+            <a class="contact__phone" href="#">0999999</a>
+            <a class="contact__location" href="#">Seattle, WA, US</a>
+        </div>
+
+        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+            Proudly Published With ASAC Team.</p>
+    </footer>
+    <script src="../js/story.js"></script>
+</body>
+
+</html>

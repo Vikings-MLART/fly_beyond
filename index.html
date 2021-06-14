@@ -4,10 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Sinbad</title>
 </head>
 <body>
-    
+    <header>
+        <div class="nav-container">
+            <p class="main-logo">Sin<span>bad</span></p>
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">
+                        <span class="material-icons-outlined">home</span>
+                        Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">
+                        <span class="material-icons-outlined">bookmark_added</span> Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">
+                        <span class="material-icons-outlined">bookmark_add</span>
+                        Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">
+                        <span class="material-icons-outlined">local_library</span>
+                        Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">
+                        <span class="material-icons-outlined">groups</span>
+                        About us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="showcase">
+            <video src="img/showcase-vedio.mp4" autoplay loop></video>
+            <h1 class="main-heading">
+                Fly Safe Fly with Freedom Fly with Sinbad
+            </h1>
+            <a href="#section-featurs" class="btn btn--cta">Let the magic happen</a>
+        </div>
+    </header>
+    <main>
+        <section class="section-features">
+            <div class="features-container">
+                <h2 class="section-heading">Key features</h2>
+
+                <div class="feature">
+                    <span class="material-icons-outlined">star</span>
+                    <h3 class="feature-heading">Best Deals</h3>
+                    <p class="feature-text">the website gives you the best deals available</p>
+                </div>
+
+                <div class="feature">
+                    <span class="material-icons-outlined">price_check</span>
+                    <h3 class="feature-heading">Cheapest Flights</h3>
+                    <p class="feature-text">the website gives you the cheapest flight offers</p>
+                </div>
+
+                <div class="feature">
+                    <span class="material-icons-outlined">ads_click</span>
+                    <h3 class="feature-heading">On Click Booking</h3>
+                    <p class="feature-text">the website gives the available to book a flight without a complex set of steps</p>
+                </div>
+
+                <div class="feature">
+                    <span class="material-icons-outlined">assistant_direction</span>
+                    <h3 class="feature-heading">Easy To Navigat</h3>
+                    <p class="feature-text">the website User Interface is simple and user friendly</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-story">
+            <h2 class="section-heading">Inspiring Stories</h2>
+            <div class="story-container">
+                <video src="img/story.mp4" autoplay loop></video>
+                <div class="users-stories">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="nav-container">
+            <p class="main-logo">Sin<span>bad</span></p>
+            <nav class="footer-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contact">
+            <a class="contact__email" href="#">sinbad.travil@example.com</a>
+            <a class="contact__phone" href="#">0999999</a>
+            <a class="contact__location" href="#">Seattle, WA, US</a>
+        </div>
+
+        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+            Proudly Published With ASAC Team.</p>
+        
+    </footer>
+    <script src="js/home.js"></script>
 </body>
 </html>
