@@ -83,7 +83,7 @@ const renderStories = function () {
       const storyUserGallary = document.createElement('div');
       for (let j = 0; j < Story.storiesList[i].picArray.length; j++) {
         let appear = document.createElement('img');
-        appear.setAttribute("src", Story.storiesList[j].picArray);
+        appear.setAttribute("src", Story.storiesList[i].picArray);
         storyUserGallary.appendChild(appear);
 
       }
