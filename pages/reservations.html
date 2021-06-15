@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+​
+    </header>
+    <main>
+<h1>hello</h1>
+​
+        <h2>Hello, to confirm your reservation please fill the following form </h2>
+​
+    <form id="info">
+        <fieldset>
+​
+        <label for="fullName">Full Name:</label><br>
+  <input type="text" id="fullName" name="fullName" required><br>
+​
+  <label for="phoneNumb">Phone Number:</label><br>
+  <input type="number" id="phoneNumb" name="phoneNumb" required><br>
+​
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br>
+​
+  <label for="address">Address:</label><br>
+  <input type="text" id="address" name="address" required><br>
+​
+<br>
+<br>
+​
+  <h3>Payment Method</h3>
+            
+            <label for="cardName">Name on Card</label><br>
+            <input type="text" id="cardName" name="cardname" placeholder="John More Doe" required ><br>
+​
+            <label for="cardNum">Credit card number</label><br>
+            <input type="number" id="cardNum" name="cardNum" placeholder="1111-2222-3333-4444" required><br>
+​
+            <label for="expmonth">Exp Month</label><br>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September" required><br>
+​
+                <label for="expyear">Exp Year</label><br>
+                <input type="text" id="expyear" name="expyear" placeholder="2018" required><br>
+​
+             
+                <label for="cvv">CVV</label><br>
+                <input type="number" id="cvv" name="cvv" placeholder="352" required><br>
+<br>
+                
+    
+​
+​
+<br>
+<br>
+​
+​
+        <h3>Extra luggage weight fee</h3>
+​
+        <label for="weight"></label><br>
+        <input type="number" name="weight" id="weight" onchange="calculate()"><br>
+​
+​
+​
+        <h3 id="fees">Fees</h3>
+        <button id='confirm' type="submit">Submit</button>
+​
+    </fieldset>
+​
+    </form>
+    <div id="table"></div>
+​
+    </main>
+​
+    <footer>
+        <div class="nav-container">
+            <img src="img/logo.png" alt="logo img">
+            <nav class="main-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+    </footer>
+    
+    <script src="../js/reservation.js"></script>
+</body>
+</html>
