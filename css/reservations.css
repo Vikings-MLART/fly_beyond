@@ -1,0 +1,69 @@
+body{
+    background-color: #fdd46b;
+
+}
+
+
+.container{
+    width: 550px;
+height: 500px;
+background-color: whitesmoke;
+border-radius: 10px; /*gives rounded corners*/
+position: relative;
+margin: 8% auto;
+
+}
+
+
+h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #03071E;
+}
+
+
+.container form{
+    width: 380px;
+    top: 40px;
+    left: 60px;
+    position: absolute; /*positioned relative to the container */
+
+}
+
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    color: transparent;
+}
+
+.btn-box{
+
+    width: 100px;
+    margin: 30px auto;
+    margin-left: 125px;
+    text-align: center;
+
+}
+
+form button{
+    width: 150px;
+    height: 50px;
+    background: linear-gradient( to right, #ff105f ,#ffad06);
+    border-radius: 30px;
+    border:0px;
+    cursor:pointer; /*makes the arrow as hand when hovering over the button*/
+
+}
+
+#form2{
+    left: 600px;
+}
+
+
+#form3{
+    left: -500px;
+}

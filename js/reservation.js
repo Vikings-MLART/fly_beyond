@@ -4,10 +4,13 @@ let buttons = document.getElementById('confirm');
 document.addEventListener('submit', validateForm);
 
 let cardName=document.getElementById('fullName');
+
 function validateForm(event) {
 
   alert(`${cardName.value} Thank you for confirming your reservation`);
+  event.preventDefault();
 
+  table.textContent='';
 }
 
 
@@ -25,7 +28,6 @@ fees.appendChild(extraF);
 function calculate() {
   let weight = document.getElementById('weight').value;
 
-  console.log(weight);
 
   if (weight <= 20) {
 
@@ -35,9 +37,10 @@ function calculate() {
 
     extraF.textContent = `${(weight - 20) * 5} $`;
 
-  }
-}
 
+  }
+
+}
 
 
 
