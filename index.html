@@ -7,17 +7,39 @@
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+      <link rel="stylesheet" href="CSS//header_footer.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Sinbad</title>
 </head>
 <body>
-    <header>
+<header>
+<img src="img/logo2.png" alt="">
+    <!-- /* Sidebar */ -->
+    <nav class="sidebar black animate-top xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+      <a href="javascript:void(0)" onclick="Close()" class="button black xxlarge padding display-topright" style="padding:6px 24px">
+        <i class="fa fa-remove"></i>
+      </a>
+      <div class="bar-block center">
+         <a href="index.html" class="bar-item button text-grey hover-black">home</a>
+        <a href="pages/book_flight.html" class="bar-item button text-grey hover-black">Book Flight</a>
+        <a href="pages/reservations.html" class="bar-item button text-grey hover-black">Reservations</a>
+        <a href="pages/story.html" class="bar-item button text-grey hover-black">Story</a>
+        <a href="pages/about_us.html" class="bar-item button text-grey hover-black">About us</a>
+
+      </div>
+    </nav>
+    <!-- !PAGE CONTENT! -->
+    <!-- Header -->
+    <span class="button xxlarge white right"
+    onclick="Open()"><i class="fa fa-bars"></i></span>
+    </header>
+
+    <!-- <header>
         <div class="nav-container">
             <p class="main-logo">Sin<span>bad</span></p>
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="index.html">
-                        <span class="material-icons-outlined">home</span>
+           
                         Home</a></li>
                     <li class="list-item"><a href="pages/book_flight.html">
                         <span class="material-icons-outlined">bookmark_added</span> Book Flight</a></li>
@@ -40,7 +62,7 @@
             </h1>
             <a href="#section-featurs" class="btn btn--cta">Let the magic happen</a>
         </div>
-    </header>
+    </header> -->
     <main>
         <section class="section-features">
             <div class="features-container">
@@ -83,6 +105,49 @@
         </section>
     </main>
     <footer>
+        <section class="hero">
+
+        <div class="nav-container">
+            <img src="img/logo2.png">
+            <p class="main-logo">Sin<span>bad</span></p>
+            <nav class="footer-nav">
+                <ul class="list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="pages/story.html">Story</a></li>
+                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main_contact">
+            <div class="contact">
+                <a class="contact__email" href="#">sinbad.travil@example.com</a>
+                <a class="contact__phone" href="#">0999999</a>
+                <a class="contact__location" href="#">Seattle, WA, US</a>
+            </div>
+    
+            <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+                Proudly Published With ASAC Team.</p>
+        </div>
+            <div class="waves"></div>
+</section>
+    </footer> 
+<script> // Open and close sidebar
+    function Open() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function Close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }</script>
+       
+     
+
+    <!-- <footer>
+        <section class="hero">
+
         <div class="nav-container">
             <p class="main-logo">Sin<span>bad</span></p>
             <nav class="footer-nav">
@@ -104,8 +169,15 @@
 
         <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
             Proudly Published With ASAC Team.</p>
-        
-    </footer>
+            <div class="content">
+                <h2>Hero Header</h2>
+                <p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non</p>
+                </div>
+              <div class="waves"></div>
+        </section>
+
+    </footer> -->
+     </script>
     <script src="js/home.js"></script>
 </body>
 </html>

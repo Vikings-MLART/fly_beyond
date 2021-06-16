@@ -3,7 +3,7 @@
 
 }
 main section:first-child{
-    background: blanchedalmond;
+    background: #f48c06;
 
 }
 
@@ -13,16 +13,18 @@ main form{
 }
 .input-group:last-child{
     display: block;
+    margin-top: 20px;
 }
 .input-group .last{
     display: block;
+    margin-bottom: 10px;
 
 }
 
 .user-story{
     margin: 20px 200px;
 
-    background: #8db7db;
+    background: #ffba08;
     padding: 30px;
     border-radius: 20px;
 
@@ -41,8 +43,9 @@ main form{
 .user-story h3{
     font-size: 35px;
 
-    color: white;
+    color: #151965;
     margin-top: 20px;
+    font-family: 'Acme', sans-serif;
 
 }
 .user-story .story-text-container{
@@ -56,7 +59,7 @@ main form{
 
 }
  .user-story .fav-img img{
-     
+    margin-right: 15px;
     width: 35%;
     height: 250px;
  }
@@ -66,8 +69,89 @@ footer{
 }
 
 .story-text-container p{
+    width: 100%;
+    height: 85px;
     font-size: 20px;
-    margin-top: 25px;
+    margin-top: 15px;
     color: antiquewhite;
-    /* overflow: scroll;*/
+    overflow: auto;
+    margin-bottom: -40px;
 } 
+
+
+.input-group:first-child {
+    width: 100%;
+    padding: -1px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: -webkit-inline-box;
+    /* margin-top: 30px; */
+    margin-bottom: 4px;
+  }
+#name.input-text{
+    width: 99%;
+    
+}
+
+.input-label{
+
+    display: -webkit-inline-box;
+    /* margin-top: 30px; */
+    margin-bottom: 9px;
+    margin-left: 2px;
+    margin-right: 5px;
+    color: #d00000;
+    font-family: 'Acme', sans-serif;
+}
+
+.gender__label{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    color: #d00000;
+    font-family: 'Acme', sans-serif;
+}
+
+.input-group{
+    display:contents;
+    width: 100%;
+  
+}
+
+#pictuers.input-text{
+    width: 99%;
+}
+
+#sumbit{
+    width: 100%;
+  background-color: #d00000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sumbit:hover{
+    background: #ffba08;
+     color: #fff;
+     border: 1px solid #eee;
+     border-radius: 20px;
+     box-shadow: 5px 5px 5px #eee;
+     text-shadow:none;
+    
+    }
+
+    #description.input-text{
+width: 99%;
+margin-bottom: 40px;
+    }
+
+    .gender{
+        margin-top:10px;
+    }
+   
