@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 'use strict';
 
-// Object.prototype.hasOwnProperty.call(obj, key)
-// const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
 let isOneWay;
+const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
 
 const cartItems = JSON.parse(localStorage.getItem('flightCart')) || [];
 const cart = new Cart(cartItems);
@@ -12,8 +11,6 @@ let desiredFlights = [];
 
 const flightSearchHandler = function(event){
   event.preventDefault();
-
-  console.log('in search');
   const flightType = document.querySelector('#flight-type').value;
   const flightClass = document.querySelector('#flight-class').value;
   const passengers = document.querySelector('#passenger').value;
@@ -30,7 +27,6 @@ const flightSearchHandler = function(event){
   if(!isOneWay){
     twoWayFlightsList = getFlights(flyTo.trim().toLowerCase(), flyFrom.trim().toLowerCase(), arrivalDate);
     desiredFlights = combineFlights(oneWayFlightList, twoWayFlightsList);
-    // isOneWay = false;
   }else
     desiredFlights = oneWayFlightList;
 
@@ -67,7 +63,6 @@ const clearFlights = function(){
 };
 
 const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, numLoops){
-  console.log('in render');
   clearFlights();
   desiredFlights = flightsList;
   const flightsContainerElement = document.querySelector('.search-results');
@@ -85,7 +80,6 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
     let endTime;
     if(isOneWay){
 
-      console.log('in isOneWay');
       ticketPrice = ( parseInt(flightsList[i].price[`${flightClass}`]) * parseInt(passengers));
       startTime = flightsList[i].departureTime.split('T')[1].split('-')[0];
       duration = timeFromMins(flightsList[i].duration);
@@ -290,7 +284,7 @@ const addToCartHandler = function(event){
   /*Use desieredFlight[0].hasOwnProperty('company') true => oneWay*/
   if(event.target.classList.contains('add-to-cart') && !event.target.classList.contains('added')){
     let ticketDataList = [];
-    if(isOneWay){
+    if(hasOwn(desiredFlights[event.target.id], 'company')){
       ticketDataList = getOneWayTicketData(event.target.id);
       cart.addItem(desiredFlights[event.target.id], ticketDataList[0], ticketDataList[1], ticketDataList[2]);
     }
@@ -345,3 +339,4 @@ const setForm = function(){
 };
 
 setForm();
+

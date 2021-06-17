@@ -1,0 +1,241 @@
+body{
+    background-color: #faebd759;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.container{
+    width: 550px;
+height: 550px;
+background-color: whitesmoke;
+border-radius: 10px; /*gives rounded corners*/
+position: relative;
+margin: 3% auto;
+float: right;
+right: 50px;
+overflow: hidden;
+}
+footer{
+    clear: both;
+}
+h2{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    color: #03071E;
+}
+.container form{
+    width: 380px;
+    top: 50px;
+    left: 60px;
+    position: absolute; /*positioned relative to the container */
+transition: 0.5s;
+}
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    color:#03071E ;
+}
+.btn-box{
+display: flex;
+justify-content: space-between;
+    /* width: 50%; */
+    margin: 30px auto;
+    /* margin-left: 125px; */
+    text-align: center;
+}
+form button{
+    width: 300px;
+    height: 50px;
+    background: linear-gradient( to right, #FF105F ,#FFAD06);
+    border-radius: 30px;
+    border:0px;
+    cursor:pointer; /*makes the arrow as hand when hovering over the button*/
+    position: relative;
+}
+#form2{
+    left: 600px;
+}
+#form3{
+    left: 600px;
+}
+.step-row{
+    width: 550px;
+    height: 40px;
+    margin:0px auto;
+    display: flex;
+    align-items: center;
+    position:relative;
+    box-shadow:0 -1px 5px -1px #000 ;
+font-size: 30px;
+}
+.step{
+    text-align: center;
+    color:#03071E;
+    position: relative;
+    padding: 18px;
+}
+#progress{
+    position:absolute;
+    height: 100%;
+    width:150px;
+    background: linear-gradient( to right, #FF105F ,#FFAD06);
+    transition: 1s;
+}
+/* to make the triangle end */
+#progress::after{
+    content: '';
+    height: 0px;
+    width: 0px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top:0;
+    border-left: 20px solid #FFAD06;
+}
+#next2{
+    margin-left: 50px;
+    width: 400px;
+    height: 50px;
+}
+#back1{
+    width: 400px;
+    height: 50px;
+}
+#back2{
+    margin-right: 50px;
+    width: 400px;
+    height: 50px;
+}
+#confirm{
+    margin-left: 50px;
+    width: 400px;
+    height: 50px;
+}
+#next1{
+    margin-left: 40px;
+}
+.cart__ticket{
+    border: #E25822;
+    border-width: 5px;
+    border-style:solid;
+    border-radius: 15px;
+    /* border-width: 5px; */
+    width: 40%;
+    /* height: 7%; */
+    box-sizing: inherit;
+    padding: 5%;
+    /* margin-bottom: 20%; */
+    background-color:wheat ;
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex-wrap:space-around;
+    align-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.cart__time-and-company{
+    display:inline-block;
+    display: flex;
+  flex-direction: column;
+    position: relative;
+/* padding-right: 2%; */
+}
+.cart__time-and-company h3{
+    display: block;
+       color:191717;
+       font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+       font-size: 130%;
+       padding-bottom: 2%;
+    }
+    .flight-company-info{
+        display: block;
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+    .flight-company-info img{
+        width: 35%;
+        height: 35%;
+        display: block;
+        /* padding: 2%; */
+    }
+    .flight-company-info p {
+        display: block;
+        color:191717;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 80%;  
+     }
+     .flight-company-info span{
+        display:block;
+        color:191717;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 70%;
+    }
+    .cart__duration-and-destination{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .cart__duration-and-destination h3 {
+        display:block;
+        color:191717;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 130%;
+        margin-left: 0.5%;
+        }
+        .cart__duration-and-destination p{
+            display:block;
+            color:191717;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 80%;
+            margin-left: 10%;
+        }
+        .cart__price-and-add{
+            /* border: #4D1702;
+            border-width: 5px;
+            border-style:solid;
+            border-radius: 15px; */
+            width: 10%; 
+            /* height: 2%; */
+            /* box-sizing: inherit; */
+            /* padding: 2%; */
+            /* background-color:rgb(179, 161, 127) ; */
+            position: relative;
+            display: flex;
+          flex-direction: row;
+          margin-bottom: 50px;
+        }
+        .cart__price-and-add h3{
+            color:#e25822;
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 125%; 
+            text-align: center;
+            padding: 15px;
+            /* padding-left: 1%;
+            padding-bottom: 2%; */
+        }
+        .cart__price-and-add h3,span{
+            display: inline;
+            }
+            .flight-price_1{
+                display:block;
+                color:191717;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 80%;
+                padding-top: 8px;
+            }
+            .flight-price_2{
+                display:block;
+                color:191717;
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 80%;
+                padding-top: 8px;
+            }
+            .cart__time-and-company h3{
+                width: 352.92px;
+              }

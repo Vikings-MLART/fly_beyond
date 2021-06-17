@@ -1,109 +1,102 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>review</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@200;300;400;500;600&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/story.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <title>Sinbad | Story</title>
 </head>
-
 <body>
     <header>
-        <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="../index.html">Home</a></li>
-                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
-                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
-                    <li class="list-item"><a class="active" href="pages/story.html">Story</a></li>
-                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="">
+            <p class="main-logo">Sin<span>bad</span>
+            </p>
         </div>
-        <br>
-        <br>
+            <nav class="sidebar">
+              <div class="bar">
+                <a href="../index.html" class="bar-item active">Home</a>
+                <a href="book_flight.html" class="bar-item">Book Flight</a>
+                <a href="reservations.html" class="bar-item">Reservations</a>
+                <a href="story.html" class="bar-item ">Story</a>
+                <a href="about_us.html" class="bar-item ">About us</a>
+              </div>
+            </nav>
     </header>
     <main>
         <section class="section-story-form">
             <div class="form-container">
                 <form class="story-form">
-
                     <div class="input-group">
-                        <label class="input-label" for="name">name</label>
+                        <label class="input-label" for="name"> NAME </label>
                         <input class="input-text" type="text" name="name" id="name" autocomplete="off" required>
                     </div>
-
                     <fieldset class="gender">
-                        <label class="gender__label">Gender</label>
+                        <label class="gender__label">GENDER</label>
                         <div class="input-group">
                             <label for="male" class="input-label">Male</label>
                             <input type="radio" value="male" id="male" name="gender">
                         </div>
-
                         <div class="input-group">
                             <label for="female" class="input-label">Female</label>
                             <input type="radio" value="female" id="female" name="gender">
                         </div>
-
-                        <!--  <label for="myImage">please insert an image </label>
-
-                        https://www.codegrepper.com/code-examples/html/accept+only+image+files+upload+html -->
-                        <!-- <input type="file" id="myImage" name="myImage" accept="image/x-png,image/gif,image/jpeg" />  -->
-
                         <div class="input-group">
-                            <label class="input-label" for="pictuers">you can share your picture here</label>
+                            <label class="input-label" for="pictuers"> You  can  share  your  picture  here </label>
                             <input class="input-text" type="text" pic="pictuers" id="pictuers" autocomplete="off"
                                 required>
                         </div>
-
                     </fieldset>
                     <br>
                     <br>
-
                     <div class="input-group">
-                        <label class="input-label" for="description">tell us briefly about your journey</label>
+                        <label class="input-label last" for="description">Tell us briefly about your journey</label>
                         <textarea class="input-text" name="description" id="description" rows="15" cols="50"
                             required></textarea>
                     </div>
-
-
-
-                    <input type="submit" value="Add Story">
+                    <input type="submit" value="Add Story" id="sumbit" >
                 </form>
             </div>
         </section>
-
         <div class="users-stories-container">
         </div>
-
     </main>
     <footer>
+        <section class="hero">
         <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
+            <img src="../img/logo.png">
+            <nav class="footer-nav">
+                <p class="main-logo">Sin<span>bad</span></p>
+
                 <ul class="list">
-                    <li class="list-item"><a href="../index.html">Home</a></li>
-                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
-                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
-                    <li class="list-item"><a href="pages/story.html">Story</a></li>
-                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="book_flight.html">Book Flight</a></li>
+                    <li class="list-item"><a href="reservations.html">Reservations</a></li>
+                    <li class="list-item"><a href="story.html">Story</a></li>
+                    <li class="list-item"><a href="about_us.html">About us</a></li>
                 </ul>
             </nav>
         </div>
-
-        <div class="contact">
-            <a class="contact__email" href="#">sinbad.travil@example.com</a>
-            <a class="contact__phone" href="#">0999999</a>
-            <a class="contact__location" href="#">Seattle, WA, US</a>
+        <div class="main_contact">
+            <h2>Contact Us</h2>
+            <div class="contact">
+                <a class="contact__email" href="#">sinbad.travil@example.com</a>
+                <a class="contact__phone" href="#">0999999</a>
+                <a class="contact__location" href="#">Seattle, WA, US</a>
+            </div>
+            <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+                Proudly Published With ASAC Team.</p>
         </div>
-
-        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
-            Proudly Published With ASAC Team.</p>
-    </footer>
+            <div class="waves"></div>
+      </section>
+    </footer> 
     <script src="../js/story.js"></script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 'use strict';
 
-let requestURL = '../json/flights-list.json';
+let requestURL = '../json/book_flight.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -15,7 +15,7 @@ request.onload = function(){
       , flights[i].origin, flights[i].destination, flights[i].price, flights[i].luggageWight);
   }
   
-  renderFlights(true, 'economy', 1, Flight.flightList, Flight.flightList.length);
+  renderFlights(true, 'economy', 1, Flight.flightList, 50);
 };
 
 let id = 0;

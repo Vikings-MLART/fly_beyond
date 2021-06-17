@@ -14,6 +14,7 @@ const generateRandomUser = function (userGender) {
       });
   });
 };
+
 async function storySubmtionHandler(event) {
   event.preventDefault();
   const userName = event.target.name.value;

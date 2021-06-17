@@ -6,6 +6,11 @@
     margin: 0;
 }
 
+html,
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .showcase{
     transform: translateY(-20px);
     position: relative;
@@ -244,7 +249,7 @@ height: 100%;
     height: 130px;
 }
 
-.img-galary img{
+.galary-img{
     margin-top: 20px;
     width: 22%;
     height: 100px;

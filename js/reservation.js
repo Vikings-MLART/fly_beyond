@@ -15,11 +15,8 @@ const clearResults = function(){
 };
 
 const renderFlights = function(flightsList, numLoops){
-  clearResults();
   const flightsContainerElement = document.querySelector('.results-container');
   for(let i = 0; i < numLoops; i++){
-
-    console.log('numLoops = ' + numLoops);
     const cartContainer = document.createElement('div');
     cartContainer.addEventListener('click', removeFromCart);
     cartContainer.classList.add('cart');
@@ -31,7 +28,6 @@ const renderFlights = function(flightsList, numLoops){
     if(!hasOwn(flightsList[i], 'company_1')){
 
       ticketPrice = ( parseInt(flightsList[i].price ) * parseInt(flightsList[i].passengers));
-      console.log('flightsList[i].departureTime = ' + flightsList[i].departureTime);
       startTime = flightsList[i].departureTime.split('T')[1].split('-')[0];
       duration = timeFromMins(flightsList[i].duration);
       endTime = addTimes(startTime, duration);
@@ -53,9 +49,6 @@ const renderFlights = function(flightsList, numLoops){
                                 </div>
                                 <div class="cart__price-and-add">
                                 <h3>Ticket Price ${ticketPrice}$</h3>
-                                  <span class="material-icons-outlined">
-                                  check
-                                  </span>
                                   <span class="material-icons-outlined remove-from-cart" id="${i}">
                                   remove_circle
                                   </span>
@@ -108,9 +101,6 @@ const renderFlights = function(flightsList, numLoops){
                                       </div>
                                       <div class="cart__price-and-add">
                                         <h3>Total Price ${totalPrice}$</h3>
-                                        <span class="material-icons-outlined">
-                                        check
-                                        </span>
                                         <span class="material-icons-outlined remove-from-cart" id="${i}">
                                         remove_circle
                                         </span>
@@ -157,14 +147,72 @@ function addTimes(t0, t1) {
 
 
 const removeFromCart = function(event){
-  console.log('in remove');
   if(event.target.classList.contains('remove-from-cart')){
     cart.removeItem(event.target.id);
     cart.saveToLocalStorage();
     loadCartItems();
+    clearResults();
     renderFlights(cart.items, cart.items.length);
   }
 };
 
 loadCartItems();
 renderFlights(cart.items, cart.items.length);
+
+
+document.querySelector('#weight').addEventListener('keyup', calculate);
+
+function calculate(e) {
+  e.preventDefault();
+  let fee = document.getElementById('fee');
+  let extraF = document.createElement('p');
+  fee.innerHTML = '';
+  fee.appendChild(extraF);
+  let weight = document.getElementById('weight').value;
+  if (weight <= 20) {
+    extraF.textContent = 'There is no Extra Fee';
+  } else if (weight > 20) {
+    extraF.textContent = `${(weight - 20) * 5} $`;
+  }
+}
+
+let form1=document.getElementById('form1');
+let form2=document.getElementById('form2');
+let form3=document.getElementById('form3');
+let next1=document.getElementById('next1');
+let next2=document.getElementById('next2');
+let back1=document.getElementById('back1');
+let back2=document.getElementById('back2');
+let progress=document.getElementById('progress');
+
+next1.onclick= function(){
+  form1.style.left='-450px';
+  form2.style.left='70px';
+  progress.style.width='330px';
+};
+
+back1.onclick= function(){
+  form2.style.left='560px';
+  form1.style.left='70px';
+  progress.style.width='130px';
+};
+
+next2.onclick= function(){
+  form2.style.left='-450px';
+  form3.style.left='70px';
+  progress.style.width='550px';
+};
+
+back2.onclick= function(){
+  form2.style.left='70px';
+  form3.style.left='560px';
+  progress.style.width='330px';
+};
+
+document.getElementById('form3').addEventListener('submit',confirmFlight);
+function confirmFlight(event) {
+  alert(`${fullName.value} Thank you for confirming your reservation`);
+  event.preventDefault();
+  document.querySelector('.results-container').innerHTML='';
+}
+

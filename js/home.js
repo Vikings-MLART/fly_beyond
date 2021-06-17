@@ -23,11 +23,8 @@ const loadStories = function(){
                                 </div>
                                 <div class="img-galary"></div>`;
       if(userStories[i].picArray.length){
-        console.log('in if');
-        for(let j = 0; j < userStories[i].picArray.length; j++){
-          console.log('in for');
+        for(let j = 0; j < userStories[i].picArray.length; j++)
           storyElement.innerHTML += `<img class="galary-img" src="${userStories[i].picArray[j]}">`;
-        }
 
         storyElement.innerHTML += `<div class="add-story">
                                      <a href="pages/story.html">Add Your Story
@@ -61,7 +58,7 @@ function appendImgs(){
 
   userStories.forEach(story =>{
     const galary = story.querySelector('.img-galary');
-    const imgList = story.querySelectorAll('.galary-img');
+    const imgList = galary.querySelectorAll('.galary-img');
     imgList.forEach(img =>{
       galary.appendChild(img);
     });
@@ -83,10 +80,16 @@ function setUserStoryText(){
 }
 
 function setUserStoryImgGalary(){
-  const imgGalary = document.querySelector('.img-galary');
-  if(imgGalary.childElementCount > 4){
-    imgGalary.style = 'overflow-y: scroll; overflow-x: hidden;';
-  }
+  const stories = document.querySelectorAll('.story');
+  stories.forEach( story =>{
+    const galary = story.querySelector('.img-galary');
+    if(galary.childElementCount > 4)
+      galary.style = 'overflow-y: scroll; overflow-x: hidden;';
+  });
+  // const imgGalary = document.querySelector('.img-galary');
+  // if(imgGalary.childElementCount > 4){
+  //   imgGalary.style = 'overflow-y: scroll; overflow-x: hidden;';
+  // }
 }
 
 function changeStory(index,length, list){
