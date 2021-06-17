@@ -19,6 +19,38 @@ header,footer{
         height: 100px;
         background: #191717;
     }
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.bar {
+    padding: 39px 0px 39px 580px;
+}
+
+.bar .bar-item{
+    width:100%;
+    font-size: 24px;
+    color: #f5deb3;
+    text-decoration-line: none;
+    padding: 30px;
+    transition: color 0.25s ease-in-out;
+}
+
+
+.bar .bar-item:hover{
+    color: #e25822;
+}
+
+
+header{
+ height: 100px;
+ background: #191717;
+}
+
+
 header img{
     float: left;
     width: 10%;
@@ -26,7 +58,6 @@ header img{
     margin-bottom: 20px;
 }
 header .main-logo{
-    
     position: absolute;
     margin-top: 35px;
     margin-left: 130px;
@@ -109,7 +140,25 @@ font-size: 25px;
       margin-top: 140px; 
       padding-left: 350px;
         }
-  .hero h2 {
+
+
+.hero .nav-container ul a{
+    color: rgb(247 208 185);
+    text-decoration-line: none;
+    font-size: 25px;
+
+}
+
+.hero .nav-container ul a:hover{
+    color: #e25822;
+ }
+
+.hero .nav-container p{
+      margin-top: 140px; 
+      padding-left: 350px;
+}
+
+.hero h2 {
     position: relative;
     z-index: 1;
     font-size: 25px;
@@ -118,6 +167,12 @@ font-size: 25px;
     line-height: 1;
     color: rgb(247 208 185);  }
   .hero p {
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgb(247 208 185);  
+}
+
+.hero p {
     position: relative;
     z-index: 1;
     font-size: 35px;
@@ -135,6 +190,18 @@ font-size: 25px;
     margin-top: 50px;
 margin-left:0px ;
 text-align: center;
+}
+
+.hero .footer-nav p{
+    color: #e25822;
+
+}
+
+.hero .copy{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left:0px ;
+    text-align: center;
   }
 
   .hero nav,.contact,img{
