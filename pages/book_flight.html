@@ -5,84 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@200;300;400;500;600&family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="../css/book_flight.css">
+    
+    
     <title>Sinbad | Book Flight</title>
 
 </head>
 
 <body>
     <header>
-        <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
-                    <li class="list-item active"><a href="book_flight.html">Book Flight</a></li>
-                    <li class="list-item"><a href="reservations.html">Reservations</a></li>
-                    <li class="list-item"><a href="story.html">Story</a></li>
-                    <li class="list-item"><a href="about_us.html">About us</a></li>
-                </ul>
-            </nav>
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="">
+            <p class="main-logo">Sin<span>bad</span>
+            </p>
         </div>
+            <nav class="sidebar">
+              <div class="bar">
+                <a href="../index.html" class="bar-item active">Home</a>
+                <a href="book_flight.html" class="bar-item">Book Flight</a>
+                <a href="reservations.html" class="bar-item">Reservations</a>
+                <a href="story.html" class="bar-item ">Story</a>
+                <a href="about_us.html" class="bar-item ">About us</a>
+              </div>
+            </nav>
     </header>
 
     <main>
 
-    <div class="search-container row">
+    <div class="search-container">
 
         <form class="flight-form">
             <div class="row">
-                <select class="col span-4-of-12" name="flight-type" id="flight-type" >
-                    <option value="two way" selected>two way</option>
-                    <option value="one way">one way</option>
+                <select class="col-span-4-of-12" name="flight-type" id="flight-type"  style="font-family: 'Teko', sans-serif;">
+                    <option value="one way" selected style="font-family: 'Teko', sans-serif;">one way</option>
+                    <option value="two way" style="font-family: 'Teko', sans-serif;">two way</option>
                 </select>
     
-                <select class="col span-4-of-12" name="flight-class" id="flight-class" >
-                    <option value="economy" selected>Economy</option>
-                    <option value="premium economy">premium economy</option>
-                    <option value="business">business</option>
-                    <option value="first">first</option>
+                <select class="col-span-4-of-12" name="flight-class" id="flight-class" style="font-family: 'Teko', sans-serif;" >
+                    <option value="economy" selected style="font-family: 'Teko', sans-serif;">Economy</option>
+                    <option value="premium economy" style="font-family: 'Teko', sans-serif;">premium economy</option>
+                    <option value="business" style="font-family: 'Teko', sans-serif;">business</option>
+                    <option value="first" style="font-family: 'Teko', sans-serif;">first</option>
                 </select>
         
-                <div class="input-group col span-2-of-12">
-                    <label for="passenger">passenger #</label>
+                <div class="input-group">
+                    <label for="passenger" id="lable" style="font-family: 'Teko', sans-serif;">Passenger #</label>
                     <input type="number" name="passenger" id="passenger" required>
                 </div>
             </div>
 
-            <div class="input-fields row">
+            <div class="input-fields">
                 <div class="field-group">
                     <span class="material-icons-outlined">flight_takeoff</span>
-                    <input type="text" name="from" id="from" placeholder="From?" required>
+                    <input type="text" name="from" id="from" placeholder="From?" required style="font-family: 'Teko', sans-serif;">
                 </div>
 
                 <div class="field-group">
                     <span class="material-icons-outlined">flight_land</span>
-                    <input type="text" name="to" id="to" placeholder="To?" required>
+                    <input type="text" name="to" id="to" placeholder="To?" required style="font-family: 'Teko', sans-serif;">
                 </div>
 
                 <div class="field-group">
-                    <input type="date" name="start-date" id="start-date" required>
-                    <input type="date" name="end-date" id="end-date">
+                    <input type="date" name="start-date" id="start-date" required style="font-family: 'Teko', sans-serif;">
+                    <input type="date" name="end-date" id="end-date" style="font-family: 'Teko', sans-serif;">
                 </div>
             </div>
 
-            <button type="submit">Search</button>
+            <button type="submit" id="button" style="font-family: 'Teko', sans-serif;">Search For Your Flight</button>
 
         </form>
 
-
-        <div class="filter-sction row">
-            <select class="col span-4-of-12" name="filter-options" id="filter-options">
-                <option value="cheapest">Cheapest</option>
-                <option value="Best">Best</option>
-                <option value="closest">Closest</option>
+ <div class="filter-sction">
+            <select class="col-span-4-of-12" name="filter-options" id="filter-options" style="font-family: 'Teko', sans-serif;">
+                <option value="cheapest" style="font-family: 'Teko', sans-serif;">Cheapest</option>
+                <option value="best" style="font-family: 'Teko', sans-serif;">Best</option>
+                <option value="closest" style="font-family: 'Teko', sans-serif;">Closest</option>
             </select>
-            <button class="filter-btn" type="button">Filter</button>
-        </div>
+            <button class="filter-btn" type="button"  style="font-family: 'Teko', sans-serif;">Filter</button>
+        </div> 
 
     </div>
 
@@ -90,89 +98,38 @@
 
     </div>
 
-
-
-<!-- 
-        <form id="flight_info">
-            <input type="radio" id="round_trip" name="type_of_the_trip" value="roundtrip">
-            <label class="lable" for="round_trip">Round_Trip</label>
-
-            <input type="radio" id="one_way" name="type_of_the_trip" value="oneway">
-            <label class="lable" for="one_way">One_Way</label>
-
-
-            
-            <div id="round_trip_button" >
-
-
-                <label class="lable" for="departing">Departing From </label>
-                <input type="text" id="departing" name="departing">
-
-
-                <label class="lable" for="going_to">Going To </label>
-                <input type="text" id="going_to" name="going_to">
-                <br>
-
-                <label class="lable" for="departdate">Departing </label>
-                <input type="date" id="departdate" name="departdate" min="2021-06-17" max="2022-06-17">
-
-                <label class="lable" for="returndate">Returning </label>
-                <input type="date" id="returndate" name="returndate" min="2021-06-18">
-                <br>
-                <label class="lable" for="adult">Adult/'s' </label>
-                <input type="number" id="adult" name="adult">
-
-                <label class="lable" for="child">Child/ Children </label>
-                <input type="number" id="child" name="child">
-                <br>
-                <label>
-                    <span>Choose Flight Class</span>
-                    <select id="flightclass">
-                        <option value="1">First </option>
-                        <option value="2">Business </option>
-                        <option value="3">Economy </option>
-                        <option value="4">Premium Economy </option>
-                    </select>
-                </label>
-                <br>
-            </div>
-            <input type="submit" value="Search For Your Flight" id="submitbtn">
-        </form>
-<button>Filter </button>
-<div id="filter">
-</div>
-<div id="render-flight">
-</div>
-
- -->
-
     </main>
     <footer>
-        <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
-
-                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
-                    <li class="list-item"><a href="pages/story.html">Story</a></li>
-                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="contact">
-            <a class="contact__email" href="#">sinbad.travil@example.com</a>
-            <a class="contact__phone" href="#">0999999</a>
-            <a class="contact__location" href="#">Seattle, WA, US</a>
-        </div>
-
-        <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
-            Proudly Published With ASAC Team.</p>
-
+        <section class="hero">
+            <div class="nav-container">
+                <img src="../img/logo.png">
+                <nav class="footer-nav">
+                    <p class="main-logo">Sin<span>bad</span></p>
+    
+                    <ul class="list">
+                        <li class="list-item"><a href="../index.html">Home</a></li>
+                        <li class="list-item"><a href="book_flight.html">Book Flight</a></li>
+                        <li class="list-item"><a href="reservations.html">Reservations</a></li>
+                        <li class="list-item"><a href="story.html">Story</a></li>
+                        <li class="list-item"><a href="about_us.html">About us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main_contact">
+                <h2>Contact Us</h2>
+                <div class="contact">
+                    <a class="contact__email" href="#">sinbad.travil@example.com</a>
+                    <a class="contact__phone" href="#">0999999</a>
+                    <a class="contact__location" href="#">Seattle, WA, US</a>
+                </div>
+                <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
+                    Proudly Published With ASAC Team.</p>
+            </div>
+                <div class="waves"></div>
+    </section>
     </footer>
+    <script src="../js/flight-cart.js"></script>
     <script src="../js/book_flight.js"></script>
-    <script src="../js/flights.js"></script>
 </body>
 
 </html>

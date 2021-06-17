@@ -13,3 +13,17 @@
 - ### Tariq Hasan Zeadeh
 
 - ### Mohammad Alzoubi (Team Leader)
+
+## Used Technologies
+
+- ### Git
+
+- ### GitHub
+
+- ### (HTML, CSS, JavaScript)
+
+- ### Local Storage
+
+- ### Thered Party API to generate randome user images
+
+- ### JSON API File to fetch all of the raw data and manipulate it using javascript

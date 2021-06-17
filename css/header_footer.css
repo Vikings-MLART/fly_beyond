@@ -1,0 +1,249 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header,footer{
+  font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #191717;
+  padding: 10px 0;
+}
+.logo-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img{
+  width: 100px;
+  height: auto;
+}
+
+.logo-container p {
+  color: #e25822;
+  font-size: 30px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.sidebar{
+  display: flex;
+  align-items: center;
+}
+
+.bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-10%);
+}
+
+.bar .bar-item{
+  text-decoration: none;
+  margin-left: 7px;
+  padding: 15px;
+  color: #f5deb3;
+  transition: color 0.25s ease-in-out;
+  font-size: 24px;
+}
+
+.bar .bar-item:hover{
+  color: #e25822;
+}
+
+/* ////footer */
+
+
+  body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-sherif;
+    margin: 0;
+    padding: 0;
+  }
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .hero {
+    position: relative;
+    color: white;
+    height: 87vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero .nav-container , .nav-container ul {
+      display: flex;
+      flex-direction: row;
+  }
+  .hero .contact{
+      display: flex;
+      flex-direction: column;
+      margin-left: -20px;
+      }
+
+  .hero .main_contact{
+      display: flex;
+      flex-direction: column;
+          margin-right: 100px;
+  }
+  .hero .contact a{
+      
+    font-size: 20px;
+    color: rgb(247 208 185);
+            margin: 5px auto;
+    text-decoration-line: none;
+  }
+  .footer-nav{
+          margin-left: -100px;
+          padding-top: 40px;
+  }
+
+  .footer-nav .main-logo{
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .hero .nav-container ul{
+    position: absolute;
+    margin: 20px 20px 30px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .nav-container li{
+    margin: 0px 20px;
+    margin: 10px 20px;
+  }
+  .hero .nav-container ul a{
+    color: rgb(247 208 185);
+              text-decoration-line: none;
+font-size: 25px;
+
+  }
+  .hero .nav-container ul a:hover{
+    color: #e25822;
+
+  }
+  .hero .nav-container p{
+      margin-top: 140px; 
+      padding-left: 350px;
+        }
+
+
+.hero .nav-container ul a{
+    color: rgb(247 208 185);
+    text-decoration-line: none;
+    font-size: 25px;
+
+}
+
+.hero .nav-container ul a:hover{
+    color: #e25822;
+ }
+
+.hero .nav-container p{
+      margin-top: 140px; 
+      padding-left: 350px;
+}
+
+.hero h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    text-align: center;
+        margin: 0 0 10px;
+    line-height: 1;
+    color: rgb(247 208 185);  }
+  .hero p {
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgb(247 208 185);  
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    font-size: 35px;
+    line-height: 1.4;
+    margin-left: -330px;
+    color: #ffa242;
+  }
+  .hero .footer-nav p{
+    color: #e25822;
+
+  }
+
+  .hero .copy{
+    font-size: 20px;
+    margin-top: 50px;
+margin-left:0px ;
+text-align: center;
+}
+
+.hero .footer-nav p{
+    color: #e25822;
+
+}
+
+.hero .copy{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left:0px ;
+    text-align: center;
+  }
+
+  .hero nav,.contact,img{
+    position: relative;
+    z-index: 1;
+  }
+  .hero img{
+    width: 70%;
+    margin-left:-20px;
+  }
+  /* ========================= */
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: #ffa242;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+  }
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  .waves::before {
+    border-radius: 44%;
+    background: rgb(12, 10, 10);
+    animation: waves 8s linear infinite;
+  }
+  .waves::after {
+    border-radius: 44%;
+    background: rgba(12, 10, 10, 0.5);
+    animation: waves 15s linear infinite;
+  }
+  @keyframes waves {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }

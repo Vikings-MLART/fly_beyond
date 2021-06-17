@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 'use strict';
-let isOneWay = true;
+
+let isOneWay;
+const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
 
 const cartItems = JSON.parse(localStorage.getItem('flightCart')) || [];
 const cart = new Cart(cartItems);
@@ -9,7 +11,6 @@ let desiredFlights = [];
 
 const flightSearchHandler = function(event){
   event.preventDefault();
-
   const flightType = document.querySelector('#flight-type').value;
   const flightClass = document.querySelector('#flight-class').value;
   const passengers = document.querySelector('#passenger').value;
@@ -18,21 +19,18 @@ const flightSearchHandler = function(event){
   const departureDate = document.querySelector('#start-date').value;
   const arrivalDate = document.querySelector('#end-date').value;
 
+  isOneWay = flightType === 'one way'? true: false;
   let oneWayFlightList = [];
   let twoWayFlightsList = [];
   oneWayFlightList = getFlights(flyFrom.trim().toLowerCase(), flyTo.trim().toLowerCase(), departureDate);
 
-  if(flightType === 'two way'){
+  if(!isOneWay){
     twoWayFlightsList = getFlights(flyTo.trim().toLowerCase(), flyFrom.trim().toLowerCase(), arrivalDate);
     desiredFlights = combineFlights(oneWayFlightList, twoWayFlightsList);
-    isOneWay = false;
-  }else{
-
+  }else
     desiredFlights = oneWayFlightList;
-    renderFlights(isOneWay,flightClass, passengers, desiredFlights, desiredFlights.length);
-  }
 
-  // event.reset();
+  renderFlights(isOneWay,flightClass, passengers, desiredFlights, desiredFlights.length);
 };
 
 const getFlights = function(flyFrom, flyTo, departureDate){
@@ -73,14 +71,15 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
     const cartContainer = document.createElement('div');
     cartContainer.addEventListener('click', addToCartHandler);
     cartContainer.classList.add('cart');
+    cartContainer.id = i;
     cartContainer;
+
     let ticketPrice = 0;
     let startTime;
     let duration;
     let endTime;
     if(isOneWay){
 
-      console.log('in isOneWay');
       ticketPrice = ( parseInt(flightsList[i].price[`${flightClass}`]) * parseInt(passengers));
       startTime = flightsList[i].departureTime.split('T')[1].split('-')[0];
       duration = timeFromMins(flightsList[i].duration);
@@ -89,19 +88,24 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
       endTime = tConvert(endTime);
       cartContainer.innerHTML = `<div class="cart__ticket">
                                     <div class="cart__time-and-company">
-                                      <h3>${startTime} - ${endTime}</h3>
-                                      <p>${flightsList[i].company}</p>
+                                      <h3>Flight Time ${startTime} - ${endTime}</h3>
+                                      <div class="flight-company-info">
+                                        <img src="../img/${flightsList[i].company}.png" alt="company logo" class="company-img">
+                                        <p>${flightsList[i].company}</p>
+                                        <span class="flight-class">Class ${flightClass}</span>
+                                      </div>
                                     </div>
                                     <div class="cart__duration-and-destination">
-                                      <h3>${duration}</h3>
+                                      <h3>Duration ${duration}</h3>
                                       <p>${flightsList[i].origin} - ${flightsList[i].destination}</p>
                                     </div>
                                   </div>
                                   <div class="cart__price-and-add">
-                                  <h3>${ticketPrice}$</h3>
+                                  <h3>Ticket Price ${ticketPrice}$</h3>
                                   <span class="material-icons-outlined add-to-cart" id="${i}">
                                     add_circle
                                   </span>
+                                  <div class="flight-passengers" style="display: none;">${passengers}</div>
                                   </div>`;
     }else{
 
@@ -115,13 +119,18 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
         endTime = tConvert(endTime);
         cartContainer.innerHTML = `<div class="cart__ticket">
                                       <div class="cart__time-and-company">
-                                        <h3>${startTime} - ${endTime}</h3>
-                                        <p>${desiredFlights[i][0].company}</p>
+                                        <h3>Flight Time ${startTime} - ${endTime}</h3>
+                                      <div class="flight-company-info">
+                                      <img src="../img/${flightsList[i][0].company}.png" alt="company logo" class="company-img">
+                                        <p>${flightsList[i][0].company}</p>
+                                        <span class="flight-class">Class ${flightClass}</span>
+                                      </div>
                                       </div>
                                       <div class="cart__duration-and-destination">
-                                        <h3>${duration}</h3>
+                                        <h3>Duration ${duration}</h3>
                                         <p>${flightsList[i][0].origin} - ${flightsList[i][0].destination}</p>
                                       </div>
+                                      <div class="flight-price_1">Ticket Price ${flightsList[i][0].price[`${flightClass}`]}</div>
                                     </div>`;
 
         if(j === 1){
@@ -129,110 +138,36 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
           cartContainer.innerHTML += ` 
                                      <div class="cart__ticket">
                                        <div class="cart__time-and-company">
-                                         <h3>${startTime} - ${endTime}</h3>
+                                         <h3>Flight Time ${startTime} - ${endTime}</h3>
+                                       <div class="flight-company-info">
+                                       <img src="../img/${flightsList[i][1].company}.png" alt="company logo" class="company-img">
                                          <p>${flightsList[i][1].company}</p>
+                                         <span class="flight-class">Class ${flightClass}</span>
+                                       </div>
                                        </div>
                                        <div class="cart__duration-and-destination">
-                                         <h3>${duration}</h3>
+                                         <h3>Duration ${duration}</h3>
                                          <p>${flightsList[i][1].origin} - ${flightsList[i][1].destination}</p>
                                        </div>
+                                       <div class="flight-price_2">Ticket Price ${flightsList[i][1].price[`${flightClass}`]}</div>
                                       </div>
                                       <div class="cart__price-and-add">
-                                        <h3>${ticketPrice}$</h3>
+                                        <h3>Total Price ${ticketPrice}$</h3>
                                         <span class="material-icons-outlined add-to-cart" id="${i}">
                                            add_circle
                                         </span>
+                                        <div class="flight-passengers" style="display: none;">${passengers}</div>
                                       </div>`;
         }
       }
     }
     flightsContainerElement.appendChild(cartContainer);
   }
+
+  const filterBtn =  document.querySelector('.filter-btn');
+  filterBtn.removeAttribute('disabled');
+  filterBtn.addEventListener('click', filterHandler);
 };
-// const renderFlights = function(isOneWay, flightClass ,passengers){
-
-//   clearFlights();
-//   const flightsContainerElement = document.querySelector('.search-results');
-//   for(let i = 0; i < desiredFlights.length; i++){
-
-//     const cartContainer = document.createElement('div');
-//     cartContainer.addEventListener('click', addToCartHandler);
-//     cartContainer.classList.add('cart');
-//     cartContainer;
-//     let ticketPrice = 0;
-//     let startTime;
-//     let duration;
-//     let endTime;
-//     if(isOneWay){
-
-//       ticketPrice = ( parseInt(desiredFlights[i].price[`${flightClass}`]) * parseInt(passengers));
-//       startTime = desiredFlights[i].departureTime.split('T')[1].split('-')[0];
-//       duration = timeFromMins(desiredFlights[i].duration);
-//       endTime = addTimes(startTime, duration);
-//       startTime = tConvert(startTime);
-//       endTime = tConvert(endTime);
-//       cartContainer.innerHTML = `<div class="cart__ticket">
-//                                     <div class="cart__time-and-company">
-//                                       <h3>${startTime} - ${endTime}</h3>
-//                                       <p>${desiredFlights[i].company}</p>
-//                                     </div>
-//                                     <div class="cart__duration-and-destination">
-//                                       <h3>${duration}</h3>
-//                                       <p>${desiredFlights[i].origin} - ${desiredFlights[i].destination}</p>
-//                                     </div>
-//                                   </div>
-//                                   <div class="cart__price-and-add">
-//                                   <h3>${ticketPrice}$</h3>
-//                                   <span class="material-icons-outlined add-to-car" id="${i}">
-//                                     add_circle
-//                                   </span>
-//                                   </div>`;
-//     }else{
-
-//       for(let j = 0; j < desiredFlights[i].length; j++){
-
-//         ticketPrice += parseInt(desiredFlights[i][j].price[`${flightClass}`]);
-//         startTime = desiredFlights[i][j].departureTime.split('T')[1].split('-')[0];
-//         duration = timeFromMins(desiredFlights[i][j].duration);
-//         endTime = addTimes(startTime, duration);
-//         startTime = tConvert(startTime);
-//         endTime = tConvert(endTime);
-//         cartContainer.innerHTML = `<div class="cart__ticket">
-//                                       <div class="cart__time-and-company">
-//                                         <h3>${startTime} - ${endTime}</h3>
-//                                         <p>${desiredFlights[i][0].company}</p>
-//                                       </div>
-//                                       <div class="cart__duration-and-destination">
-//                                         <h3>${duration}</h3>
-//                                         <p>${desiredFlights[i][0].origin} - ${desiredFlights[i][0].destination}</p>
-//                                       </div>
-//                                     </div>`;
-
-//         if(j === 1){
-//           ticketPrice *= parseInt(passengers);
-//           cartContainer.innerHTML += `
-//                                      <div class="cart__ticket">
-//                                        <div class="cart__time-and-company">
-//                                          <h3>${startTime} - ${endTime}</h3>
-//                                          <p>${desiredFlights[i][1].company}</p>
-//                                        </div>
-//                                        <div class="cart__duration-and-destination">
-//                                          <h3>${duration}</h3>
-//                                          <p>${desiredFlights[i][1].origin} - ${desiredFlights[i][1].destination}</p>
-//                                        </div>
-//                                       </div>
-//                                       <div class="cart__price-and-add">
-//                                         <h3>${ticketPrice}$</h3>
-//                                         <span class="material-icons-outlined add-to-car" id="${i}">
-//                                            add_circle
-//                                         </span>
-//                                       </div>`;
-//         }
-//       }
-//     }
-//     flightsContainerElement.appendChild(cartContainer);
-//   }
-// };
 
 //https://stackoverflow.com/questions/13898423/javascript-convert-24-hour-time-of-day-string-to-12-hour-time-with-am-pm-and-no
 function tConvert (time) {
@@ -269,14 +204,95 @@ function addTimes(t0, t1) {
   return timeFromMins(timeToMins(t0) + timeToMins(t1));
 }
 
+const filterHandler = function(e){
+  e.preventDefault();
+  const filterOn = document.querySelector('#filter-options').value;
+  let filteredList = Flight.flightList;
+
+  if(filterOn === 'cheapest')
+    filteredList.sort(filterOnChepest);
+  else if(filterOn === 'best')
+    filteredList.sort(filterOnBest);
+  else
+    filteredList.sort(filterOnClosest);
+
+  renderFlights(true, 'economy', 1, filteredList, filteredList.length);
+};
+
+function filterOnChepest(a, b) {
+
+  if ( a.price['economy'] < b.price['economy'] ){
+    return -1;
+  }
+  if ( a.price['economy'] > b.price['economy'] ){
+    return 1;
+  }
+  return 0;
+}
+
+
+function filterOnClosest(a, b) {
+
+  if ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0]) ){
+    return -1;
+  }
+  if ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0]) ){
+    return 1;
+  }
+  return 0;
+}
+
+
+function filterOnBest(a, b) {
+
+  if ( (a.price['economy'] < b.price['economy'])
+     && ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0])) ){
+    return -1;
+  }
+  if ( (a.price['economy'] > b.price['economy'])
+  && ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0])) ){
+    return 1;
+  }
+  return 0;
+}
+
+const getOneWayTicketData = function(id){
+  let list = [];
+
+  list.push(document.getElementById(`${id}`).querySelector('.flight-passengers').textContent);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-class').textContent.split(' ')[1]);
+  list.push(document.getElementById(`${id}`).querySelector('.cart__price-and-add h3').textContent.split(' ')[2]);
+
+  return list;
+};
+
+const getTwoWayTicketData = function(id){
+  let list = [];
+
+  list.push(document.getElementById(`${id}`).querySelector('.flight-passengers').textContent);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-class').textContent.split(' ')[1]);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-price_1').textContent.split(' ')[2]);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-price_2').textContent.split(' ')[2]);
+
+  return list;
+};
+
+
 const addToCartHandler = function(event){
   event.preventDefault();
 
+  /*Use desieredFlight[0].hasOwnProperty('company') true => oneWay*/
   if(event.target.classList.contains('add-to-cart') && !event.target.classList.contains('added')){
-    if(isOneWay)
-      cart.addItem(desiredFlights[event.target.id]);
-    else
-      cart.addTwoItem(desiredFlights[event.target.id][0], desiredFlights[event.target.id][1]);
+    let ticketDataList = [];
+    if(hasOwn(desiredFlights[event.target.id], 'company')){
+      ticketDataList = getOneWayTicketData(event.target.id);
+      cart.addItem(desiredFlights[event.target.id], ticketDataList[0], ticketDataList[1], ticketDataList[2]);
+    }
+    else{
+      ticketDataList = getTwoWayTicketData(event.target.id);
+      cart.addTwoItem(desiredFlights[event.target.id][0], ticketDataList[1], ticketDataList[2],
+        desiredFlights[event.target.id][1], ticketDataList[1], ticketDataList[3], ticketDataList[0]);
+    }
 
     cart.saveToLocalStorage();
     event.target.classList.add('added');
@@ -323,6 +339,4 @@ const setForm = function(){
 };
 
 setForm();
-
-// renderFlights(true, 'economy', 1, Flight.flightList, 15);
 
