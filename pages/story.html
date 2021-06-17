@@ -5,30 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>review</title>
+    
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Teko:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    
+ 
  <link rel="stylesheet" href="../css/story.css">
- <link rel="stylesheet" href="../css/header_footer.css">
-</head>
+ </head>
 
 <body>
-    <header>
-        <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="../index.html">Home</a></li>
-                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
-                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
-                    <li class="list-item"><a class="active" href="pages/story.html">Story</a></li>
-                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
-        <br>
-        <br>
-    </header>
+    
+    
+<header>
+    <img src="../img/logo2.png" alt=""><p class="main-logo">Sin<span>bad</span></p>
+        <nav class="sidebar">
+       
+          <div class="bar">
+             <a href="../index.html" class="bar-item">home</a>
+            <a href="../pages/book_flight.html" class="bar-item">Book Flight</a>
+            <a href="../pages/reservations.html" class="bar-item">Reservations</a>
+            <a href="../pages/story.html" class="bar-item ">Story</a>
+            <a href="../pages/about_us.html" class="bar-item ">About us</a>
+          </div>
+        </nav>
+        </header>
+
     <main>
         <section class="section-story-form">
             <div class="form-container">
@@ -52,7 +55,7 @@
                         </div>
 
                         <div class="input-group">
-                            <label class="input-label" for="pictuers"> You  can  share  your  picture  here </label>
+                            <label class="input-label" for="pictuers" aria-placeholder="you can split between picture with a space" > YOU  CAN   SHARE  YOUR  PICTURE  HERE </label>
                             <input class="input-text" type="text" pic="pictuers" id="pictuers" autocomplete="off"
                                 required>
                         </div>
@@ -62,7 +65,7 @@
                     <br>
 
                     <div class="input-group">
-                        <label class="input-label last" for="description">Tell us briefly about your journey</label>
+                        <label class="input-label last" for="description">TELL US BRIEFLY ABOUT YOUR JOURNEY</label>
                         <textarea class="input-text" name="description" id="description" rows="15" cols="50"
                             required></textarea>
                     </div>
@@ -78,29 +81,36 @@
         </div>
 
     </main>
-    <footer>
-        <div class="nav-container">
-            <img src="img/logo.png" alt="logo img">
-            <nav class="main-nav">
-                <ul class="list">
-                    <li class="list-item"><a href="../index.html">Home</a></li>
-                    <li class="list-item"><a href="pages/book_flight.html">Book Flight</a></li>
-                    <li class="list-item"><a href="pages/reservations.html">Reservations</a></li>
-                    <li class="list-item"><a href="pages/story.html">Story</a></li>
-                    <li class="list-item"><a href="pages/about_us.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
+    
+   <footer>
+    <section class="hero">
+    <div class="nav-container">
+        <img src="../img/logo2.png">
+        <nav class="footer-nav">
+            <p class="main-logo">Sin<span>bad</span></p>
 
+            <ul class="list">
+                <li class="list-item"><a href="../index.html">Home</a></li>
+                <li class="list-item"><a href="../pages/book_flight.html">Book Flight</a></li>
+                <li class="list-item"><a href="../pages/reservations.html">Reservations</a></li>
+                <li class="list-item"><a href="../pages/story.html">Story</a></li>
+                <li class="list-item"><a href="../pages/about_us.html">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main_contact">
+        <h2>Contact Us</h2>
         <div class="contact">
             <a class="contact__email" href="#">sinbad.travil@example.com</a>
             <a class="contact__phone" href="#">0999999</a>
             <a class="contact__location" href="#">Seattle, WA, US</a>
         </div>
-
         <p class="copy">Sinbad &copy; 2021 - All Rights Reserved.<br>
             Proudly Published With ASAC Team.</p>
-    </footer>
+    </div>
+        <div class="waves"></div>
+</section>
+</footer> 
     <script src="../js/story.js"></script>
 </body>
 

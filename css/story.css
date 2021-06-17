@@ -3,12 +3,15 @@
 
 }
 main section:first-child{
-    background: #f48c06;
+    background:#e25822;
 
 }
+header,footer{
+    font-family: 'Staatliches', cursive;}
 
 main form{
     padding: 80px;
+    font-size: 26px;
 
 }
 .input-group:last-child{
@@ -24,7 +27,7 @@ main form{
 .user-story{
     margin: 20px 200px;
 
-    background: #ffba08;
+    background: wheat;
     padding: 30px;
     border-radius: 20px;
 
@@ -43,9 +46,9 @@ main form{
 .user-story h3{
     font-size: 35px;
 
-    color: #151965;
+    color: #03071e;
     margin-top: 20px;
-    font-family: 'Acme', sans-serif;
+   font-family: 'Teko', sans-serif;
 
 }
 .user-story .story-text-container{
@@ -73,7 +76,7 @@ footer{
     height: 85px;
     font-size: 20px;
     margin-top: 15px;
-    color: antiquewhite;
+    color: #03071e;
     overflow: auto;
     margin-bottom: -40px;
 } 
@@ -93,6 +96,7 @@ footer{
   }
 #name.input-text{
     width: 99%;
+    height: 25px;
     
 }
 
@@ -103,16 +107,16 @@ footer{
     margin-bottom: 9px;
     margin-left: 2px;
     margin-right: 5px;
-    color: #d00000;
-    font-family: 'Acme', sans-serif;
+    color: wheat;
+    font-family: 'Teko', sans-serif;
 }
 
 .gender__label{
     margin-right: 20px;
     margin-bottom: 10px;
     margin-left: 0px;
-    color: #d00000;
-    font-family: 'Acme', sans-serif;
+    color:wheat;
+    font-family: 'Teko', sans-serif;
 }
 
 .input-group{
@@ -123,21 +127,23 @@ footer{
 
 #pictuers.input-text{
     width: 99%;
+    height: 25px;
 }
 
 #sumbit{
     width: 100%;
-  background-color: #d00000;
-  color: white;
+  background-color: wheat;
+  color: #03071e;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+ 
 }
 
 #sumbit:hover{
-    background: #ffba08;
+    background: #e25822;
      color: #fff;
      border: 1px solid #eee;
      border-radius: 20px;
