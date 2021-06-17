@@ -1,26 +1,8 @@
 'use strict';
 let userStories = JSON.parse(localStorage.getItem('userStories')) || [];
 
-
-const addNewStory = function(){
-  const storyElement = document.createElement('div');
-  const addStoryLink = document.createElement('a');
-  const addStoryIcon = document.createElement('span');
-
-  addStoryIcon.classList.add('material-icons-outlined');
-  addStoryIcon.textContent = 'add_circle';
-  addStoryLink.href = 'pages/story.html';
-  addStoryLink.textContent = 'Add Your Story';
-  storyElement.classList.add('user-story');
-  storyElement.appendChild(addStoryLink);
-  storyElement.appendChild(addStoryIcon);
-
-  return storyElement;
-};
-
 const clearUsersStories = function(){
   document.querySelector('.users-stories').innerHTML = '';
-  console.log('clearUsersStories ');
 };
 
 const loadStories = function(){
@@ -28,31 +10,69 @@ const loadStories = function(){
   clearUsersStories();
   const userStoriesContainer = document.querySelector('.users-stories');
 
-  console.log('length ' + userStories.length);
-
   let stop = userStories.length - 1 > 3 ? (userStories.length - 1) - 3 : 0;
   for(let i = userStories.length - 1; i >= stop; i--){
-    const storyElement = document.createElement('div');
-    const storyTextContainer = document.createElement('div');
-    const userName = document.createElement('h3');
-    const userImage = document.createElement('img');
-    const userStoryText = document.createElement('p');
+    let storyElement = document.createElement('div');
+    storyElement.classList.add('story');
+    storyElement.innerHTML = `<div class="user-img-name">
+                                <img class="user-img" src="${userStories[i].imgPath}">
+                                <h3>${userStories[i].name}</h3>
+                              </div>
+                              <div class="story-text-container">
+                                <p class="story-text">${userStories[i].storyText}</p>
+                              </div>
+                              <div class="img-galary"></div>`;
+    if(userStories[i].picArray.length){
+      console.log('in if');
+      for(let j = 0; j < userStories[i].picArray.length; j++){
+        console.log('in for');
+        storyElement.innerHTML += `<img class="galary-img" src="${userStories[i].picArray[j]}">`;
+      }
 
-    userName.textContent = userStories[i].name;
-    userImage.src = userStories[i].imgPath;
-    userStoryText.textContent = userStories[i].storyText;
-    storyElement.classList.add('user-story');
-    storyTextContainer.classList.add('story-text-container');
-
-    storyTextContainer.appendChild(userName);
-    storyTextContainer.appendChild(userStoryText);
-    storyElement.appendChild(userImage);
-    storyElement.appendChild(storyTextContainer);
+      storyElement.innerHTML += `<div class="add-story">
+                                   <a href="pages/story.html">Add Your Story
+                                     <span class="material-icons-outlined">
+                                       add_circle
+                                     </span>
+                                    </a>
+                                 </div>`;
+    }
     userStoriesContainer.appendChild(storyElement);
   }
-
-  userStoriesContainer.appendChild(addNewStory());
+  appendImgs();
+  setUserStoryText();
+  setUserStoryImgGalary();
 };
 
+function appendImgs(){
+  const userStories = document.querySelectorAll('.story');
+
+  userStories.forEach(story =>{
+    const galary = story.querySelector('.img-galary');
+    const imgList = story.querySelectorAll('.galary-img');
+    imgList.forEach(img =>{
+      galary.appendChild(img);
+    });
+  });
+
+}
+
+function setUserStoryText(){
+  const textContainer = document.querySelector('.story-text-container');
+  const textLength = document.querySelector('.story-text').textContent.length;
+
+  if(textLength > 500){
+    textContainer.style = 'overflow-y: scroll; overflow-x: hidden;';
+  }
+}
+
+function setUserStoryImgGalary(){
+  const imgGalary = document.querySelector('.img-galary');
+  if(imgGalary.childElementCount > 4){
+    imgGalary.style = 'overflow-y: scroll; overflow-x: hidden;';
+  }
+}
 
 loadStories();
+
+

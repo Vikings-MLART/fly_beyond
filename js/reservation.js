@@ -1,14 +1,25 @@
 /* eslint-disable no-undef */
 'use strict';
 
-const cartItems = JSON.parse(localStorage.getItem('flightCart')) || [];
-const cart = new Cart(cartItems);
+let cart;
 
+const loadCartItems = function(){
+  const cartItems = JSON.parse(localStorage.getItem('flightCart')) || [];
+  cart = new Cart(cartItems);
+};
 
-const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, numLoops){
+const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+
+const clearResults = function(){
+  document.querySelector('.results-container').innerHTML = '';
+};
+
+const renderFlights = function(flightsList, numLoops){
+  clearResults();
   const flightsContainerElement = document.querySelector('.results-container');
   for(let i = 0; i < numLoops; i++){
 
+    console.log('numLoops = ' + numLoops);
     const cartContainer = document.createElement('div');
     cartContainer.addEventListener('click', removeFromCart);
     cartContainer.classList.add('cart');
@@ -17,72 +28,93 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
     let startTime;
     let duration;
     let endTime;
-    if(isOneWay){
+    if(!hasOwn(flightsList[i], 'company_1')){
 
-      ticketPrice = ( parseInt(flightsList[i].price[`${flightClass}`]) * parseInt(passengers));
+      ticketPrice = ( parseInt(flightsList[i].price ) * parseInt(flightsList[i].passengers));
+      console.log('flightsList[i].departureTime = ' + flightsList[i].departureTime);
       startTime = flightsList[i].departureTime.split('T')[1].split('-')[0];
       duration = timeFromMins(flightsList[i].duration);
       endTime = addTimes(startTime, duration);
       startTime = tConvert(startTime);
       endTime = tConvert(endTime);
       cartContainer.innerHTML = `<div class="cart__ticket">
-                                      <div class="cart__time-and-company">
-                                        <h3>${startTime} - ${endTime}</h3>
-                                        <p>${flightsList[i].company}</p>
-                                      </div>
-                                      <div class="cart__duration-and-destination">
-                                        <h3>${duration}</h3>
-                                        <p>${flightsList[i].origin} - ${flightsList[i].destination}</p>
-                                      </div>
+                                  <div class="cart__time-and-company">
+                                    <h3>Flight Time ${startTime} - ${endTime}</h3>
+                                    <div class="flight-company-info">
+                                      <img src="../img/${flightsList[i].company}.png" alt="company logo" class="company-img">
+                                      <p>${flightsList[i].company}</p>
+                                      <span class="flight-class">Class ${flightsList[i].flightClass}</span>
                                     </div>
-                                    <div class="cart__price-and-add">
-                                    <h3>${ticketPrice}$</h3>
-                                    <span class="material-icons-outlined remove-from-cart" id="${i}">
-                                    remove_circle
-                                    </span>
-                                    </div>`;
+                                  </div>
+                                  <div class="cart__duration-and-destination">
+                                    <h3>Duration ${duration}</h3>
+                                    <p>${flightsList[i].origin} - ${flightsList[i].destination}</p>
+                                  </div>
+                                </div>
+                                <div class="cart__price-and-add">
+                                <h3>Ticket Price ${ticketPrice}$</h3>
+                                  <span class="material-icons-outlined">
+                                  check
+                                  </span>
+                                  <span class="material-icons-outlined remove-from-cart" id="${i}">
+                                  remove_circle
+                                  </span>
+                                </div>`;
     }else{
 
-      for(let j = 0; j < flightsList[i].length; j++){
+      const ticketPrice_1 = parseInt(flightsList[i].price_1);
+      const ticketPrice_2 = parseInt(flightsList[i].price_2);
+      const totalPrice = ticketPrice_1 + ticketPrice_2 * parseInt(flightsList[i].passengers);
+      let startTime_1 = flightsList[i].departureTime_1.split('T')[1].split('-')[0];
+      let startTime_2 = flightsList[i].departureTime_2.split('T')[1].split('-')[0];
+      const duration_1 = timeFromMins(flightsList[i].duration_1);
+      const duration_2 = timeFromMins(flightsList[i].duration_2);
+      let endTime_1 = addTimes(startTime_1, duration_1);
+      let endTime_2 = addTimes(startTime_2, duration_2);
+      startTime_1 = tConvert(startTime_1);
+      startTime_2 = tConvert(startTime_2);
+      endTime_1 = tConvert(endTime_1);
+      endTime_2 = tConvert(endTime_2);
 
-        ticketPrice += parseInt(flightsList[i][j].price[`${flightClass}`]);
-        startTime = flightsList[i][j].departureTime.split('T')[1].split('-')[0];
-        duration = timeFromMins(flightsList[i][j].duration);
-        endTime = addTimes(startTime, duration);
-        startTime = tConvert(startTime);
-        endTime = tConvert(endTime);
-        cartContainer.innerHTML = `<div class="cart__ticket">
+      cartContainer.innerHTML = `<div class="cart__ticket">
+                                    <div class="cart__time-and-company">
+                                      <h3>Flight Time ${startTime_1} - ${endTime_1}</h3>
+                                    <div class="flight-company-info">
+                                    <img src="../img/${flightsList[i].company_1}.png" alt="company logo" class="company-img">
+                                      <p>${flightsList[i].company_1}</p>
+                                      <span class="flight-class">Class ${flightsList[i].flightClass_1}</span>
+                                    </div>
+                                    </div>
+                                    <div class="cart__duration-and-destination">
+                                      <h3>Duration ${duration_1}</h3>
+                                      <p>${flightsList[i].origin_1} - ${flightsList[i].destination_1}</p>
+                                    </div>
+                                    <div class="flight-price_1">Ticket Price ${flightsList[i].price_1}</div>
+                                  </div>
+                                  <div class="cart__ticket">
                                         <div class="cart__time-and-company">
-                                          <h3>${startTime} - ${endTime}</h3>
-                                          <p>${desiredFlights[i][0].company}</p>
+                                          <h3>Flight Time ${startTime_2} - ${endTime_2}</h3>
+                                        <div class="flight-company-info">
+                                        <img src="../img/${flightsList[i].company_2}.png" alt="company logo" class="company-img">
+                                          <p>${flightsList[i].company_2}</p>
+                                          <span class="flight-class">Class ${flightsList[i].flightClass_2}</span>
+                                        </div>
                                         </div>
                                         <div class="cart__duration-and-destination">
-                                          <h3>${duration}</h3>
-                                          <p>${flightsList[i][0].origin} - ${flightsList[i][0].destination}</p>
+                                          <h3>Duration ${duration_2}</h3>
+                                          <p>${flightsList[i].origin_2} - ${flightsList[i].destination_2}</p>
                                         </div>
+                                        <div class="flight-price_2">Ticket Price ${flightsList[i].price_2}</div>
+                                      </div>
+                                      <div class="cart__price-and-add">
+                                        <h3>Total Price ${totalPrice}$</h3>
+                                        <span class="material-icons-outlined">
+                                        check
+                                        </span>
+                                        <span class="material-icons-outlined remove-from-cart" id="${i}">
+                                        remove_circle
+                                        </span>
                                       </div>`;
-
-        if(j === 1){
-          ticketPrice *= parseInt(passengers);
-          cartContainer.innerHTML += ` 
-                                       <div class="cart__ticket">
-                                         <div class="cart__time-and-company">
-                                           <h3>${startTime} - ${endTime}</h3>
-                                           <p>${flightsList[i][1].company}</p>
-                                         </div>
-                                         <div class="cart__duration-and-destination">
-                                           <h3>${duration}</h3>
-                                           <p>${flightsList[i][1].origin} - ${flightsList[i][1].destination}</p>
-                                         </div>
-                                        </div>
-                                        <div class="cart__price-and-add">
-                                          <h3>${ticketPrice}$</h3>
-                                          <span class="material-icons-outlined remove-from-cart" id="${i}">
-                                          remove_circle
-                                          </span>
-                                        </div>`;
-        }
-      }
     }
     flightsContainerElement.appendChild(cartContainer);
   }
@@ -125,163 +157,14 @@ function addTimes(t0, t1) {
 
 
 const removeFromCart = function(event){
+  console.log('in remove');
   if(event.target.classList.contains('remove-from-cart')){
-    if(isOneWay)
-      cart.addItem(desiredFlights[event.target.id]);
-    else
-      cart.addTwoItem(desiredFlights[event.target.id][0], desiredFlights[event.target.id][1]);
-
+    cart.removeItem(event.target.id);
     cart.saveToLocalStorage();
-    event.target.classList.add('added');
+    loadCartItems();
+    renderFlights(cart.items, cart.items.length);
   }
 };
 
-
-// let fees = document.getElementById('fees');
-// let extraF = document.createElement('p');
-// fees.appendChild(extraF);
-// let father = document.getElementById('table');
-// let table = document.createElement('table');
-// let cardName=document.getElementById('fullName');
-
-// let headArray = ['Flight Company ', ' duration ', ' Departure Time', ' Araival Time', 'Origin', 'Destination', 'Price', 'Allowed Luggage Wight', 'remove'];
-
-// father.appendChild(table);
-// table.setAttribute('style', 'border: solid black 1px;border-collapse: collapse;');
-
-
-// document.getElementById('info').addEventListener('submit', validateForm);
-
-// const cartItems = JSON.parse(localStorage.getItem('flightCart')) || [];
-// const cart = new Cart(cartItems);
-
-// let array = cart.items;
-
-// function validateForm(event) {
-
-//   alert(`${cardName.value} Thank you for confirming your reservation`);
-//   event.preventDefault();
-
-//   table.textContent='';
-// }
-
-// function calculate() {
-//   let weight = document.getElementById('weight').value;
-
-//   if (weight <= 20) {
-
-//     extraF.textContent = 'There is no Extra Fee';
-
-//   } else if (weight > 20) {
-
-//     extraF.textContent = `${(weight - 20) * 5} $`;
-
-
-//   }
-
-// }
-
-
-// //Table heading
-
-// let getHeader = function () {
-
-//   let trElement = document.createElement('tr');
-//   table.append(trElement);
-//   trElement.setAttribute('style', 'border: solid black 1px;border-collapse: collapse;');
-
-//   for (let i = 0; i < headArray.length; i++) {
-
-//     let thElement = document.createElement('th');
-//     trElement.append(thElement);
-//     thElement.setAttribute('style', 'border: solid black 1px;border-collapse: collapse;');
-
-//     thElement.textContent = headArray[i];
-
-//   }
-// };
-
-// getHeader();
-
-
-// // table content
-// // table content
-// let total=0;
-// let render = function () {
-//   console.log('array = ' + array[0]);
-//   total =0;
-//   for (let j = 0; j < array.length; j++) {
-
-//     let trElement = document.createElement('tr');
-
-//     table.append(trElement);
-//     trElement.setAttribute('style','border: solid black 1px;border-collapse: collapse;');
-
-
-//     for(let y in array[j]){
-//       let thElement = document.createElement('th');
-//       trElement.append(thElement);
-//       thElement.setAttribute('style','border: solid black 1px;border-collapse: collapse;');
-//       thElement.textContent = array[j][y];
-//     }
-
-//     total+=array[j].price;
-//     let thElement = document.createElement('th');
-//     trElement.append(thElement);
-//     thElement.setAttribute('style','border: solid black 1px;border-collapse: collapse;');
-//     let btn= document.createElement('button');
-//     thElement.append(btn);
-
-
-//     // give the button an id related to the element index (for the first element the button id will be btn0, for the second element btn1 .... )
-//     btn.setAttribute('id', 'btn'+j);
-//     // trElement.appendChild(btn);
-//     btn.textContent='remove';
-//   }
-// };
-
-// render();
-// addTotal();
-
-// function addingClick(){
-
-//   for (let i=0; i<array.length; i++){
-//     // get all buttons we created in the render function and add onclick function
-
-//     let btn=document.getElementById(`btn${i}`);
-//     btn.onclick= function(){
-//       console.log('total', total);
-//       total-=array[i].price;
-//       console.log('total', total);
-//       console.log(array[i].price);
-
-//       // the button id= btni then remove the i element from the array
-//       array.splice(i,1);
-
-//       table.textContent='';
-//       getHeader();
-//       //render again
-//       render();
-
-
-//       // console.log(array[i].price);
-//       addingClick();
-
-//       addTotal();
-//     };
-//   }
-// }
-// addingClick();
-
-// function addTotal(){
-//   console.log(total);
-//   let footer= document.createElement('tfoot');
-//   footer.setAttribute('style', 'border: solid black 1px;border-collapse: collapse;');
-
-//   table.appendChild(footer);
-
-//   let thBox=document.createElement('th');
-//   thBox.setAttribute('style', 'border: solid black 1px;border-collapse: collapse;');
-//   footer.appendChild(thBox);
-//   thBox.textContent='Total:'+total;
-// }
+loadCartItems();
+renderFlights(cart.items, cart.items.length);
