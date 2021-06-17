@@ -14,9 +14,8 @@ request.onload = function(){
     new Flight(flights[i].company, flights[i].duration, flights[i].departureTime, flights[i].arrivalTime
       , flights[i].origin, flights[i].destination, flights[i].price, flights[i].luggageWight);
   }
-
-
-  renderFlights(true, 'economy', 1, Flight.flightList, 50);
+  
+  renderFlights(true, 'economy', 1, Flight.flightList, Flight.flightList.length);
 };
 
 let id = 0;
@@ -27,24 +26,19 @@ const Cart = function(items){
 };
 
 
-Cart.prototype.addItem = function(flightObj, flightClass, price){
-  let newItem = new CartItemOneWay(flightObj ,flightClass, price);
+Cart.prototype.addItem = function(flightObj, passengers, flightClass, price){
+  let newItem = new CartItemOneWay(flightObj , passengers, flightClass, price);
   newItem.id = id++;
   this.items.push(newItem);
 };
 
-Cart.prototype.addTwoItem = function(flightObj,flightClass_1, price_1, flightObj2, flightClass_2, price_2){
-  let newItem = new CartItemTowWay(flightObj,flightClass_1, price_1, flightObj2, flightClass_2, price_2);
+Cart.prototype.addTwoItem = function(flightObj_1, flightClass_1, price_1, flightObj_2, flightClass_2, price_2, passengers){
+  let newItem = new CartItemTowWay(flightObj_1, flightClass_1, price_1, flightObj_2, flightClass_2, price_2, passengers);
   newItem.id = id++;
   this.items.push(newItem);
 };
 
 Cart.prototype.removeItem = function(id){
-  // this.items.forEach( (item,index) =>{
-  //   if(item[id] === id){
-  //     this.items.splice(index, 1);
-  //   }
-  // });
   this.items.splice(id, 1);
 };
 
@@ -54,10 +48,11 @@ Cart.prototype.saveToLocalStorage = function(){
 };
 
 
-const CartItemOneWay = function(flightObj, flightClass, price){
+const CartItemOneWay = function(flightObj, passengers, flightClass, price){
 
   this.id;
 
+  this.passengers = passengers;
   this.flightClass = flightClass;
   this.company = flightObj.company;
   this.duration = flightObj.duration;
@@ -70,9 +65,10 @@ const CartItemOneWay = function(flightObj, flightClass, price){
 
 };
 
-const CartItemTowWay = function(flightObj_1, flightClass_1, price_1, flightObj_2, flightClass_2, price_2){
+const CartItemTowWay = function(flightObj_1, flightClass_1, price_1, flightObj_2, flightClass_2, price_2, passengers){
 
   this.id;
+  this.passengers = passengers;
 
   this.flightClass_1 = flightClass_1;
   this.company_1 = flightObj_1.company;

@@ -25,29 +25,23 @@ async function storySubmtionHandler(event) {
   localStorage.setItem('userStories', JSON.stringify(Story.storiesList));
   renderStories();
   event.target.reset();
-  // const storyUserGallary = document.createElement('div');
-  // const pic = document.getElementById('pictuers');
-  // if (pic.value) {
-  //   const picArray = pic.value.split(' ');
-  //   for (let i = 0; i < picArray.length; i++) {
-  //     let appear = document.createElement('img');
-  //     appear.setAttribute("src", picArray[i]);
-  //     storyUserGallary.appendChild(appear);
-  //   }
-
-  // }
 }
 function Story(name, storyText, imgPath, picArray) {
   this.name = name;
   this.imgPath = imgPath;
   this.storyText = storyText;
-  this.picArray = picArray;
+  this.picArray=picArray;
   Story.storiesList.push(this);
 }
+
 Story.storiesList = [];
+
+
 const clearStories = function () {
   document.querySelector('.users-stories-container').innerHTML = '';
 };
+
+
 const loadStorage = function () {
   Story.storiesList = JSON.parse(localStorage.getItem('userStories')) || [];
 };
@@ -58,17 +52,15 @@ const storyUserGallary = document.createElement('div');
 
 
 const renderStories = function () {
-
   clearStories();
   loadStorage();
   const userStoriesContainer = document.querySelector('.users-stories-container');
-
   for (let i = Story.storiesList.length - 1; i >= 0; i--) {
-
     const storyElement = document.createElement('div');
     const storyTextContainer = document.createElement('div');
     const userName = document.createElement('h3');
     const userImage = document.createElement('img');
+    userImage.classList.add('img-story');
     const userStoryText = document.createElement('p');
     userName.textContent = Story.storiesList[i].name;
     userImage.src = Story.storiesList[i].imgPath;
@@ -83,18 +75,13 @@ const renderStories = function () {
       const storyUserGallary = document.createElement('div');
       for (let j = 0; j < Story.storiesList[i].picArray.length; j++) {
         let appear = document.createElement('img');
-        appear.setAttribute("src", Story.storiesList[i].picArray);
+        appear.setAttribute("src", Story.storiesList[i].picArray[j]);
+        storyUserGallary.classList.add('fav-img');
         storyUserGallary.appendChild(appear);
-
       }
       storyElement.appendChild(storyUserGallary);
     }
-
-
-
-    
     userStoriesContainer.appendChild(storyElement);
-
   }
 };
 document.querySelector('.story-form').addEventListener('submit', storySubmtionHandler);

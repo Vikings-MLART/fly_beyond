@@ -96,7 +96,7 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
                                     <div class="cart__time-and-company">
                                       <h3>Flight Time ${startTime} - ${endTime}</h3>
                                       <div class="flight-company-info">
-                                        <img href="../img/${flightsList[i].company}.png" alt="company logo" class="company-img">
+                                        <img src="../img/${flightsList[i].company}.png" alt="company logo" class="company-img">
                                         <p>${flightsList[i].company}</p>
                                         <span class="flight-class">Class ${flightClass}</span>
                                       </div>
@@ -127,14 +127,14 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
                                       <div class="cart__time-and-company">
                                         <h3>Flight Time ${startTime} - ${endTime}</h3>
                                       <div class="flight-company-info">
-                                      <img href="../img/${flightsList[i][0].company}.png" alt="company logo" class="company-img">
+                                      <img src="../img/${flightsList[i][0].company}.png" alt="company logo" class="company-img">
                                         <p>${flightsList[i][0].company}</p>
                                         <span class="flight-class">Class ${flightClass}</span>
                                       </div>
                                       </div>
                                       <div class="cart__duration-and-destination">
                                         <h3>Duration ${duration}</h3>
-                                        <p>T${flightsList[i][0].origin} - ${flightsList[i][0].destination}</p>
+                                        <p>${flightsList[i][0].origin} - ${flightsList[i][0].destination}</p>
                                       </div>
                                       <div class="flight-price_1">Ticket Price ${flightsList[i][0].price[`${flightClass}`]}</div>
                                     </div>`;
@@ -146,7 +146,7 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
                                        <div class="cart__time-and-company">
                                          <h3>Flight Time ${startTime} - ${endTime}</h3>
                                        <div class="flight-company-info">
-                                       <img href="../img/${flightsList[i][1].company}.png" alt="company logo" class="company-img">
+                                       <img src="../img/${flightsList[i][1].company}.png" alt="company logo" class="company-img">
                                          <p>${flightsList[i][1].company}</p>
                                          <span class="flight-class">Class ${flightClass}</span>
                                        </div>
@@ -213,87 +213,74 @@ function addTimes(t0, t1) {
 const filterHandler = function(e){
   e.preventDefault();
   const filterOn = document.querySelector('#filter-options').value;
-  let filteredList = [];
+  let filteredList = Flight.flightList;
 
   if(filterOn === 'cheapest')
-    filteredList = filterOnChepest();
+    filteredList.sort(filterOnChepest);
   else if(filterOn === 'best')
-    filteredList = filterOnBest();
+    filteredList.sort(filterOnBest);
   else
-    filteredList = filterOnClosest();
+    filteredList.sort(filterOnClosest);
 
   renderFlights(true, 'economy', 1, filteredList, filteredList.length);
 };
 
-const filterOnChepest = function(flightList = []){
-  flightList = flightList.length ? flightList : Flight.flightList;
+function filterOnChepest(a, b) {
 
-  for(let i = 0; i < flightList.length - 1; i++){
-
-    const elementIPrice = flightList[i].price['economy'];
-    const elementIPlusOnePrice = flightList[i+1].price['economy'];
-
-    if(elementIPrice > elementIPlusOnePrice){
-      const a = flightList[i];
-      flightList[i] = flightList[i + 1];
-      flightList[i + 1] = a;
-    }
-
+  if ( a.price['economy'] < b.price['economy'] ){
+    return -1;
   }
-
-  return flightList;
-};
-
-
-const filterOnClosest = function(flightList = []){
-  flightList = flightList.length ? flightList : Flight.flightList;
-
-  for(let i = 0; i <flightList.length - 1; i++){
-    const elementITime = Date.parse(flightList[i].departureTime.split('T')[0]);
-    const elementIPlusOneTime = Date.parse(flightList[i + 1].departureTime.split('T')[0]);
-
-    if( elementITime > elementIPlusOneTime){
-      const a = flightList[i];
-      flightList[i] = flightList[i + 1];
-      flightList[i + 1] = a;
-    }
+  if ( a.price['economy'] > b.price['economy'] ){
+    return 1;
   }
+  return 0;
+}
 
-  return flightList;
-};
 
+function filterOnClosest(a, b) {
 
-const filterOnBest = function(flightList = []){
-  flightList = flightList.length ? flightList : Flight.flightList;
-
-  for(let i = 0; i < flightList.length - 1; i++){
-    const elementIPrice = flightList[i].price['economy'];
-    const elementIPlusOnePrice = flightList[i + 1].price['economy'];
-
-    const elementITime = Date.parse(flightList[i].departureTime.split('T')[0]);
-    const elementIPlusOneTime = Date.parse(flightList[i + 1].departureTime.split('T')[0]);
-
-    if( elementIPrice > elementIPlusOnePrice && elementITime > elementIPlusOneTime){
-      const a = flightList[i];
-      flightList[i] = flightList[i + 1];
-      flightList[i + 1] = a;
-    }
+  if ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0]) ){
+    return -1;
   }
+  if ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0]) ){
+    return 1;
+  }
+  return 0;
+}
 
-  return flightList;
-};
+
+function filterOnBest(a, b) {
+
+  if ( (a.price['economy'] < b.price['economy'])
+     && ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0])) ){
+    return -1;
+  }
+  if ( (a.price['economy'] > b.price['economy'])
+  && ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0])) ){
+    return 1;
+  }
+  return 0;
+}
 
 const getOneWayTicketData = function(id){
   let list = [];
-  list.push(document.querySelector(`#${id} .cart .flight-class`).textContent.split(' ')[1]);
-  list.push(document.querySelector(`#${id}.cart .cart__price-and-add h3`).textContent.split(' ')[2]);
+
+  list.push(document.getElementById(`${id}`).querySelector('.flight-passengers').textContent);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-class').textContent.split(' ')[1]);
+  list.push(document.getElementById(`${id}`).querySelector('.cart__price-and-add h3').textContent.split(' ')[2]);
+
+  return list;
 };
 
 const getTwoWayTicketData = function(id){
   let list = [];
-  list.push(document.querySelector(`#${id} .cart .flight-class`).textContent.split(' ')[1]);
-  list.push(document.querySelector(`#${id} .cart .flight-price_1`).textContent.split(' ')[2]);
-  list.push(document.querySelector(`#${id} .cart .flight-price_2`).textContent.split(' ')[2]);
+
+  list.push(document.getElementById(`${id}`).querySelector('.flight-passengers').textContent);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-class').textContent.split(' ')[1]);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-price_1').textContent.split(' ')[2]);
+  list.push(document.getElementById(`${id}`).querySelector('.flight-price_2').textContent.split(' ')[2]);
+
+  return list;
 };
 
 
@@ -305,12 +292,12 @@ const addToCartHandler = function(event){
     let ticketDataList = [];
     if(isOneWay){
       ticketDataList = getOneWayTicketData(event.target.id);
-      cart.addItem(desiredFlights[event.target.id], ticketDataList[0], ticketDataList[1]);
+      cart.addItem(desiredFlights[event.target.id], ticketDataList[0], ticketDataList[1], ticketDataList[2]);
     }
     else{
-      listOfHiddenData = getTwoWayTicketData(event.target.id);
-      cart.addTwoItem(desiredFlights[event.target.id][0], ticketDataList[0], ticketDataList[1],
-        desiredFlights[event.target.id][1], ticketDataList[0], ticketDataList[2]);
+      ticketDataList = getTwoWayTicketData(event.target.id);
+      cart.addTwoItem(desiredFlights[event.target.id][0], ticketDataList[1], ticketDataList[2],
+        desiredFlights[event.target.id][1], ticketDataList[1], ticketDataList[3], ticketDataList[0]);
     }
 
     cart.saveToLocalStorage();
