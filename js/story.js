@@ -21,12 +21,25 @@ async function storySubmtionHandler(event) {
   const usetStoryText = event.target.description.value;
   const userGender = event.target.gender.value;
   randomUserImageURL = await generateRandomUser(userGender);
-  const picArray = event.target.pictuers.value.split(' ');
+  let picArray = event.target.pictuers.value.split(' ');
+  picArray = trimImageURL(picArray);
+  console.log('picArray = ' + picArray);
   new Story(userName, usetStoryText, randomUserImageURL, picArray);
   localStorage.setItem('userStories', JSON.stringify(Story.storiesList));
   renderStories();
   event.target.reset();
 }
+
+const trimImageURL = function(picArray){
+  const picList = [];
+  picArray.forEach( picURL =>{
+    if(picURL !== '')
+      picList.push(picURL);
+  });
+  return picList;
+}
+
+
 function Story(name, storyText, imgPath, picArray) {
   this.name = name;
   this.imgPath = imgPath;

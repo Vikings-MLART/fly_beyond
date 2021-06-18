@@ -58,7 +58,7 @@ function appendImgs(){
 
   userStories.forEach(story =>{
     const galary = story.querySelector('.img-galary');
-    const imgList = galary.querySelectorAll('.galary-img');
+    const imgList = story.querySelectorAll('.galary-img');
     imgList.forEach(img =>{
       galary.appendChild(img);
     });
@@ -86,10 +86,6 @@ function setUserStoryImgGalary(){
     if(galary.childElementCount > 4)
       galary.style = 'overflow-y: scroll; overflow-x: hidden;';
   });
-  // const imgGalary = document.querySelector('.img-galary');
-  // if(imgGalary.childElementCount > 4){
-  //   imgGalary.style = 'overflow-y: scroll; overflow-x: hidden;';
-  // }
 }
 
 function changeStory(index,length, list){

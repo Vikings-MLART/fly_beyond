@@ -280,8 +280,6 @@ const getTwoWayTicketData = function(id){
 
 const addToCartHandler = function(event){
   event.preventDefault();
-
-  /*Use desieredFlight[0].hasOwnProperty('company') true => oneWay*/
   if(event.target.classList.contains('add-to-cart') && !event.target.classList.contains('added')){
     let ticketDataList = [];
     if(hasOwn(desiredFlights[event.target.id], 'company')){
