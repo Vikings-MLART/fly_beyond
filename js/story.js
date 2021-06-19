@@ -23,7 +23,6 @@ async function storySubmtionHandler(event) {
   randomUserImageURL = await generateRandomUser(userGender);
   let picArray = event.target.pictuers.value.split(' ');
   picArray = trimImageURL(picArray);
-  console.log('picArray = ' + picArray);
   new Story(userName, usetStoryText, randomUserImageURL, picArray);
   localStorage.setItem('userStories', JSON.stringify(Story.storiesList));
   renderStories();

@@ -37,7 +37,7 @@ const getFlights = function(flyFrom, flyTo, departureDate){
   let flightsList = [];
   for(let i = 0; i< Flight.flightList.length; i++){
     if(Flight.flightList[i].origin.toLowerCase() === flyFrom && Flight.flightList[i].destination.toLowerCase() === flyTo
-    && Date.parse(Flight.flightList[i].departureTime.split('T')[0]) === Date.parse(departureDate))
+    && Flight.flightList[i].departureTime.split('T')[0] === departureDate)
       flightsList.push(Flight.flightList[i]);
   }
   return flightsList;
@@ -74,10 +74,10 @@ const renderFlights = function(isOneWay, flightClass ,passengers, flightsList, n
     cartContainer.id = i;
     cartContainer;
 
-    let ticketPrice = 0;
-    let startTime;
-    let duration;
-    let endTime;
+    let ticketPrice = 0,
+      startTime = 0,
+      duration = 0,
+      endTime = 0;
     if(isOneWay){
 
       ticketPrice = ( parseInt(flightsList[i].price[`${flightClass}`]) * parseInt(passengers));
@@ -207,14 +207,19 @@ function addTimes(t0, t1) {
 const filterHandler = function(e){
   e.preventDefault();
   const filterOn = document.querySelector('#filter-options').value;
-  let filteredList = Flight.flightList;
+  const filteredList = Flight.flightList;
 
-  if(filterOn === 'cheapest')
-    filteredList.sort(filterOnChepest);
-  else if(filterOn === 'best')
-    filteredList.sort(filterOnBest);
-  else
+  if(filterOn === 'closest'){
     filteredList.sort(filterOnClosest);
+  }
+
+  else if(filterOn === 'cheapest'){
+    filteredList.sort(filterOnChepest);
+  }
+  else{
+    filteredList.sort(filterOnBest);
+  }
+
 
   renderFlights(true, 'economy', 1, filteredList, filteredList.length);
 };
@@ -233,10 +238,10 @@ function filterOnChepest(a, b) {
 
 function filterOnClosest(a, b) {
 
-  if ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0]) ){
+  if ( a.departureTime.split('T')[0] < b.departureTime.split('T')[0] ){
     return -1;
   }
-  if ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0]) ){
+  if ( a.departureTime.split('T')[0] > b.departureTime.split('T')[0] ){
     return 1;
   }
   return 0;
@@ -246,11 +251,11 @@ function filterOnClosest(a, b) {
 function filterOnBest(a, b) {
 
   if ( (a.price['economy'] < b.price['economy'])
-     && ( Date.parse(a.departureTime.split('T')[0]) < Date.parse(b.departureTime.split('T')[0])) ){
+     && (a.departureTime.split('T')[0] < b.departureTime.split('T')[0]) ){
     return -1;
   }
   if ( (a.price['economy'] > b.price['economy'])
-  && ( Date.parse(a.departureTime.split('T')[0]) > Date.parse(b.departureTime.split('T')[0])) ){
+  && (a.departureTime.split('T')[0] > b.departureTime.split('T')[0]) ){
     return 1;
   }
   return 0;
@@ -337,4 +342,3 @@ const setForm = function(){
 };
 
 setForm();
-
