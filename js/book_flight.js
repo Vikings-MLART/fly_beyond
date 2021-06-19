@@ -209,17 +209,13 @@ const filterHandler = function(e){
   const filterOn = document.querySelector('#filter-options').value;
   const filteredList = Flight.flightList;
 
-  if(filterOn === 'closest'){
+  if(filterOn === 'closest')
     filteredList.sort(filterOnClosest);
-  }
 
-  else if(filterOn === 'cheapest'){
+  else if(filterOn === 'cheapest')
     filteredList.sort(filterOnChepest);
-  }
-  else{
+  else
     filteredList.sort(filterOnBest);
-  }
-
 
   renderFlights(true, 'economy', 1, filteredList, filteredList.length);
 };
